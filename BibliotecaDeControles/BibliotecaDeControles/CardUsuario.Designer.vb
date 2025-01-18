@@ -23,101 +23,87 @@ Partial Class CardUsuario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CardUsuario))
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnMail = New System.Windows.Forms.Button()
-        Me.btnPerfil = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.tlpFondo = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnVisualizar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.lblTlfno = New System.Windows.Forms.Label()
         Me.lblID = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
         Me.btnFotoPerfil = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.tlpFondo.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TableLayoutPanel1
+        'tlpFondo
         '
-        Me.TableLayoutPanel1.ColumnCount = 5
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.TableLayoutPanel1.Controls.Add(Me.btnEditar, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnMail, 2, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnPerfil, 3, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button4, 4, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.btnFotoPerfil, 1, 0)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(22, 25, 22, 25)
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(900, 288)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.tlpFondo.ColumnCount = 5
+        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
+        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tlpFondo.Controls.Add(Me.btnModificar, 2, 1)
+        Me.tlpFondo.Controls.Add(Me.btnVisualizar, 3, 1)
+        Me.tlpFondo.Controls.Add(Me.btnEliminar, 4, 1)
+        Me.tlpFondo.Controls.Add(Me.TableLayoutPanel2, 2, 0)
+        Me.tlpFondo.Controls.Add(Me.btnFotoPerfil, 1, 0)
+        Me.tlpFondo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tlpFondo.Location = New System.Drawing.Point(0, 0)
+        Me.tlpFondo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.tlpFondo.Name = "tlpFondo"
+        Me.tlpFondo.Padding = New System.Windows.Forms.Padding(22, 25, 22, 25)
+        Me.tlpFondo.RowCount = 2
+        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpFondo.Size = New System.Drawing.Size(900, 288)
+        Me.tlpFondo.TabIndex = 0
         '
-        'btnEditar
+        'btnModificar
         '
-        Me.btnEditar.AutoSize = True
-        Me.btnEditar.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnEditar.Location = New System.Drawing.Point(47, 219)
-        Me.btnEditar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(164, 38)
-        Me.btnEditar.TabIndex = 0
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.btnModificar.AutoSize = True
+        Me.btnModificar.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnModificar.Location = New System.Drawing.Point(217, 219)
+        Me.btnModificar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(215, 38)
+        Me.btnModificar.TabIndex = 0
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.UseVisualStyleBackColor = True
         '
-        'btnMail
+        'btnVisualizar
         '
-        Me.btnMail.AutoSize = True
-        Me.btnMail.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnMail.Location = New System.Drawing.Point(217, 219)
-        Me.btnMail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnMail.Name = "btnMail"
-        Me.btnMail.Size = New System.Drawing.Size(215, 38)
-        Me.btnMail.TabIndex = 0
-        Me.btnMail.Text = "Enviar correo"
-        Me.btnMail.UseVisualStyleBackColor = True
+        Me.btnVisualizar.AutoSize = True
+        Me.btnVisualizar.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnVisualizar.Location = New System.Drawing.Point(438, 219)
+        Me.btnVisualizar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnVisualizar.Name = "btnVisualizar"
+        Me.btnVisualizar.Size = New System.Drawing.Size(215, 38)
+        Me.btnVisualizar.TabIndex = 0
+        Me.btnVisualizar.Text = "Visualizar"
+        Me.btnVisualizar.UseVisualStyleBackColor = True
         '
-        'btnPerfil
+        'btnEliminar
         '
-        Me.btnPerfil.AutoSize = True
-        Me.btnPerfil.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnPerfil.Location = New System.Drawing.Point(438, 219)
-        Me.btnPerfil.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.btnPerfil.Name = "btnPerfil"
-        Me.btnPerfil.Size = New System.Drawing.Size(215, 38)
-        Me.btnPerfil.TabIndex = 0
-        Me.btnPerfil.Text = "Ver Perfil"
-        Me.btnPerfil.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.AutoSize = True
-        Me.Button4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button4.Location = New System.Drawing.Point(659, 219)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(216, 38)
-        Me.Button4.TabIndex = 0
-        Me.Button4.Text = "Dar de Baja"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnEliminar.AutoSize = True
+        Me.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnEliminar.Location = New System.Drawing.Point(659, 219)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(216, 38)
+        Me.btnEliminar.TabIndex = 0
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel2
         '
         Me.TableLayoutPanel2.ColumnCount = 1
-        Me.TableLayoutPanel1.SetColumnSpan(Me.TableLayoutPanel2, 3)
+        Me.tlpFondo.SetColumnSpan(Me.TableLayoutPanel2, 3)
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.lblTlfno, 0, 3)
-        Me.TableLayoutPanel2.Controls.Add(Me.lblID, 0, 2)
-        Me.TableLayoutPanel2.Controls.Add(Me.lblNombre, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.lblNombre, 0, 2)
+        Me.TableLayoutPanel2.Controls.Add(Me.lblID, 0, 1)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(217, 29)
         Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -146,17 +132,17 @@ Partial Class CardUsuario
         Me.lblID.AutoSize = True
         Me.lblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblID.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.lblID.Location = New System.Drawing.Point(3, 76)
+        Me.lblID.Location = New System.Drawing.Point(3, 36)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(52, 40)
+        Me.lblID.Size = New System.Drawing.Size(57, 40)
         Me.lblID.TabIndex = 0
-        Me.lblID.Text = "ID"
+        Me.lblID.Text = "10"
         '
         'lblNombre
         '
         Me.lblNombre.AutoSize = True
         Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(3, 36)
+        Me.lblNombre.Location = New System.Drawing.Point(3, 76)
         Me.lblNombre.Name = "lblNombre"
         Me.lblNombre.Size = New System.Drawing.Size(301, 40)
         Me.lblNombre.TabIndex = 1
@@ -178,24 +164,23 @@ Partial Class CardUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.tlpFondo)
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MinimumSize = New System.Drawing.Size(900, 288)
         Me.Name = "CardUsuario"
         Me.Size = New System.Drawing.Size(900, 288)
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
+        Me.tlpFondo.ResumeLayout(False)
+        Me.tlpFondo.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.TableLayoutPanel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents btnEditar As Button
-    Friend WithEvents btnMail As Button
-    Friend WithEvents btnPerfil As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents tlpFondo As TableLayoutPanel
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents btnVisualizar As Button
+    Friend WithEvents btnEliminar As Button
     Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
     Friend WithEvents lblNombre As Label
     Friend WithEvents lblID As Label
