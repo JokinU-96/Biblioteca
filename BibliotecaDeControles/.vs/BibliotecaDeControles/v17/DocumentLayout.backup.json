@@ -26,8 +26,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CardUsuario.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\BibliotecaDeControles\\BibliotecaDeControles\\CardUsuario.vb",
+              "RelativeDocumentMoniker": "BibliotecaDeControles\\CardUsuario.vb",
+              "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\BibliotecaDeControles\\BibliotecaDeControles\\CardUsuario.vb [Dise\u00F1o]",
+              "RelativeToolTip": "BibliotecaDeControles\\CardUsuario.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-01-08T20:16:55.162Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -49,7 +61,7 @@
               "RelativeDocumentMoniker": "BibliotecaDeControles\\CardLibro.vb",
               "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\BibliotecaDeControles\\BibliotecaDeControles\\CardLibro.vb",
               "RelativeToolTip": "BibliotecaDeControles\\CardLibro.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-01-08T20:53:05.148Z",
               "EditorCaption": ""
@@ -64,18 +76,6 @@
               "RelativeToolTip": "BibliotecaDeControles\\CardLibro.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-01-08T20:51:55.379Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CardUsuario.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\BibliotecaDeControles\\BibliotecaDeControles\\CardUsuario.vb",
-              "RelativeDocumentMoniker": "BibliotecaDeControles\\CardUsuario.vb",
-              "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\BibliotecaDeControles\\BibliotecaDeControles\\CardUsuario.vb [Dise\u00F1o]",
-              "RelativeToolTip": "BibliotecaDeControles\\CardUsuario.vb [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-08T20:16:55.162Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

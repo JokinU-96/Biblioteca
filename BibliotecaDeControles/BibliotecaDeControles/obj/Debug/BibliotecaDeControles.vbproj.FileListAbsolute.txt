@@ -10,3 +10,15 @@ C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\BibliotecaDeCont
 C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\BibliotecaDeControles.pdb
 C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\BibliotecaDeControles.CardLibro.resources
 C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\BibliotecaDeControles.CardUsuario.resources
+C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\BibliotecaDeControles.dll
+C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\BibliotecaDeControles.pdb
+C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\BibliotecaDeControles.xml
+C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\BibliotecaDeControles.vbproj.AssemblyReference.cache
+C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\BibliotecaDeControles.CardLibro.resources
+C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\BibliotecaDeControles.Resources.resources
+C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\BibliotecaDeControles.CardUsuario.resources
+C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\BibliotecaDeControles.vbproj.GenerateResource.cache
+C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\BibliotecaDeControles.vbproj.CoreCompileInputs.cache
+C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\BibliotecaDeControles.dll
+C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\BibliotecaDeControles.xml
+C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\BibliotecaDeControles.pdb
