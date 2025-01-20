@@ -70,6 +70,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BotonRedondeado.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CardLibro.Designer.vb">
       <DependentUpon>CardLibro.vb</DependentUpon>
     </Compile>
