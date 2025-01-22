@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CardUsuario
     Inherits System.Windows.Forms.UserControl
 
     'UserControl1 reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class CardUsuario
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CardUsuario))
         Me.tlpFondo = New System.Windows.Forms.TableLayoutPanel()
@@ -29,8 +29,8 @@ Partial Class CardUsuario
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.lblTlfno = New System.Windows.Forms.Label()
-        Me.lblID = New System.Windows.Forms.Label()
         Me.lblNombre = New System.Windows.Forms.Label()
+        Me.lblID = New System.Windows.Forms.Label()
         Me.btnFotoPerfil = New System.Windows.Forms.Button()
         Me.tlpFondo.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -39,7 +39,7 @@ Partial Class CardUsuario
         'tlpFondo
         '
         Me.tlpFondo.ColumnCount = 5
-        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 22.0!))
+        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
         Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
@@ -51,23 +51,21 @@ Partial Class CardUsuario
         Me.tlpFondo.Controls.Add(Me.btnFotoPerfil, 1, 0)
         Me.tlpFondo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpFondo.Location = New System.Drawing.Point(0, 0)
-        Me.tlpFondo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.tlpFondo.Name = "tlpFondo"
-        Me.tlpFondo.Padding = New System.Windows.Forms.Padding(22, 25, 22, 25)
+        Me.tlpFondo.Padding = New System.Windows.Forms.Padding(20, 20, 20, 20)
         Me.tlpFondo.RowCount = 2
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.tlpFondo.Size = New System.Drawing.Size(900, 288)
+        Me.tlpFondo.Size = New System.Drawing.Size(800, 230)
         Me.tlpFondo.TabIndex = 0
         '
         'btnModificar
         '
         Me.btnModificar.AutoSize = True
         Me.btnModificar.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnModificar.Location = New System.Drawing.Point(217, 219)
-        Me.btnModificar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnModificar.Location = New System.Drawing.Point(195, 175)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(215, 38)
+        Me.btnModificar.Size = New System.Drawing.Size(189, 30)
         Me.btnModificar.TabIndex = 0
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = True
@@ -76,10 +74,9 @@ Partial Class CardUsuario
         '
         Me.btnVisualizar.AutoSize = True
         Me.btnVisualizar.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnVisualizar.Location = New System.Drawing.Point(438, 219)
-        Me.btnVisualizar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnVisualizar.Location = New System.Drawing.Point(390, 175)
         Me.btnVisualizar.Name = "btnVisualizar"
-        Me.btnVisualizar.Size = New System.Drawing.Size(215, 38)
+        Me.btnVisualizar.Size = New System.Drawing.Size(189, 30)
         Me.btnVisualizar.TabIndex = 0
         Me.btnVisualizar.Text = "Visualizar"
         Me.btnVisualizar.UseVisualStyleBackColor = True
@@ -88,10 +85,9 @@ Partial Class CardUsuario
         '
         Me.btnEliminar.AutoSize = True
         Me.btnEliminar.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnEliminar.Location = New System.Drawing.Point(659, 219)
-        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnEliminar.Location = New System.Drawing.Point(585, 175)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(216, 38)
+        Me.btnEliminar.Size = New System.Drawing.Size(192, 30)
         Me.btnEliminar.TabIndex = 0
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
@@ -105,8 +101,7 @@ Partial Class CardUsuario
         Me.TableLayoutPanel2.Controls.Add(Me.lblNombre, 0, 2)
         Me.TableLayoutPanel2.Controls.Add(Me.lblID, 0, 1)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(217, 29)
-        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(195, 23)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 5
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -114,61 +109,59 @@ Partial Class CardUsuario
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(658, 182)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(582, 146)
         Me.TableLayoutPanel2.TabIndex = 1
         '
         'lblTlfno
         '
         Me.lblTlfno.AutoSize = True
         Me.lblTlfno.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.lblTlfno.Location = New System.Drawing.Point(3, 116)
+        Me.lblTlfno.Location = New System.Drawing.Point(3, 96)
         Me.lblTlfno.Name = "lblTlfno"
-        Me.lblTlfno.Size = New System.Drawing.Size(110, 29)
+        Me.lblTlfno.Size = New System.Drawing.Size(89, 25)
         Me.lblTlfno.TabIndex = 0
         Me.lblTlfno.Text = "Teléfono"
+        '
+        'lblNombre
+        '
+        Me.lblNombre.AutoSize = True
+        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombre.Location = New System.Drawing.Point(3, 60)
+        Me.lblNombre.Name = "lblNombre"
+        Me.lblNombre.Size = New System.Drawing.Size(252, 36)
+        Me.lblNombre.TabIndex = 1
+        Me.lblNombre.Text = "Nombre Apellidos"
         '
         'lblID
         '
         Me.lblID.AutoSize = True
         Me.lblID.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblID.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.lblID.Location = New System.Drawing.Point(3, 36)
+        Me.lblID.Location = New System.Drawing.Point(3, 24)
         Me.lblID.Name = "lblID"
-        Me.lblID.Size = New System.Drawing.Size(57, 40)
+        Me.lblID.Size = New System.Drawing.Size(49, 36)
         Me.lblID.TabIndex = 0
         Me.lblID.Text = "10"
-        '
-        'lblNombre
-        '
-        Me.lblNombre.AutoSize = True
-        Me.lblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombre.Location = New System.Drawing.Point(3, 76)
-        Me.lblNombre.Name = "lblNombre"
-        Me.lblNombre.Size = New System.Drawing.Size(301, 40)
-        Me.lblNombre.TabIndex = 1
-        Me.lblNombre.Text = "Nombre Apellidos"
         '
         'btnFotoPerfil
         '
         Me.btnFotoPerfil.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.btnFotoPerfil.BackgroundImage = CType(resources.GetObject("btnFotoPerfil.BackgroundImage"), System.Drawing.Image)
         Me.btnFotoPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnFotoPerfil.Location = New System.Drawing.Point(47, 38)
-        Me.btnFotoPerfil.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnFotoPerfil.Location = New System.Drawing.Point(43, 30)
         Me.btnFotoPerfil.Name = "btnFotoPerfil"
-        Me.btnFotoPerfil.Size = New System.Drawing.Size(164, 164)
+        Me.btnFotoPerfil.Size = New System.Drawing.Size(146, 131)
         Me.btnFotoPerfil.TabIndex = 2
         Me.btnFotoPerfil.UseVisualStyleBackColor = True
         '
         'CardUsuario
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.tlpFondo)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.MinimumSize = New System.Drawing.Size(900, 288)
+        Me.MinimumSize = New System.Drawing.Size(800, 230)
         Me.Name = "CardUsuario"
-        Me.Size = New System.Drawing.Size(900, 288)
+        Me.Size = New System.Drawing.Size(800, 230)
         Me.tlpFondo.ResumeLayout(False)
         Me.tlpFondo.PerformLayout()
         Me.TableLayoutPanel2.ResumeLayout(False)

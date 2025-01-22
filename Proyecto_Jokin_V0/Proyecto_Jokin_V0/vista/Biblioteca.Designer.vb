@@ -29,14 +29,34 @@ Partial Class Biblioteca
         Me.btnUsuarios = New System.Windows.Forms.Label()
         Me.btnLibros = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnCrearLibro = New BibliotecaDeControles.BotonRedondeado()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SqLiteCommand1 = New System.Data.SQLite.SQLiteCommand()
-        Me.btnCrearLibro = New BibliotecaDeControles.BotonRedondeado()
         btnCrearUsuario = New BibliotecaDeControles.BotonRedondeado()
         Me.tlpFondo.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'btnCrearUsuario
+        '
+        btnCrearUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        btnCrearUsuario.AutoSize = True
+        btnCrearUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(94, Byte), Integer))
+        btnCrearUsuario.borderRadius = 20
+        btnCrearUsuario.FlatAppearance.BorderSize = 0
+        btnCrearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        btnCrearUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        btnCrearUsuario.ForeColor = System.Drawing.Color.White
+        btnCrearUsuario.Location = New System.Drawing.Point(989, 14)
+        btnCrearUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        btnCrearUsuario.MinimumSize = New System.Drawing.Size(0, 26)
+        btnCrearUsuario.Name = "btnCrearUsuario"
+        btnCrearUsuario.Padding = New System.Windows.Forms.Padding(6)
+        btnCrearUsuario.Size = New System.Drawing.Size(200, 58)
+        btnCrearUsuario.TabIndex = 2
+        btnCrearUsuario.Text = "Nuevo Usuario"
+        btnCrearUsuario.UseVisualStyleBackColor = False
         '
         'tlpFondo
         '
@@ -51,26 +71,26 @@ Partial Class Biblioteca
         Me.tlpFondo.Controls.Add(Me.Panel1, 0, 3)
         Me.tlpFondo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpFondo.Location = New System.Drawing.Point(0, 0)
-        Me.tlpFondo.Margin = New System.Windows.Forms.Padding(25)
+        Me.tlpFondo.Margin = New System.Windows.Forms.Padding(22, 20, 22, 20)
         Me.tlpFondo.Name = "tlpFondo"
         Me.tlpFondo.RowCount = 4
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
-        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
-        Me.tlpFondo.Size = New System.Drawing.Size(1478, 1244)
+        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 700.0!))
+        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.tlpFondo.Size = New System.Drawing.Size(1282, 1003)
         Me.tlpFondo.TabIndex = 0
         '
         'PanelPrincipal
         '
-        Me.PanelPrincipal.AutoScroll = True
         Me.PanelPrincipal.AutoSize = True
-        Me.PanelPrincipal.BackColor = System.Drawing.SystemColors.Window
+        Me.PanelPrincipal.BackColor = System.Drawing.SystemColors.Info
         Me.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelPrincipal.Location = New System.Drawing.Point(3, 193)
-        Me.PanelPrincipal.MinimumSize = New System.Drawing.Size(0, 33)
+        Me.PanelPrincipal.Location = New System.Drawing.Point(3, 152)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.PanelPrincipal.MinimumSize = New System.Drawing.Size(0, 100)
         Me.PanelPrincipal.Name = "PanelPrincipal"
-        Me.PanelPrincipal.Size = New System.Drawing.Size(1472, 626)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(1276, 696)
         Me.PanelPrincipal.TabIndex = 0
         '
         'TableLayoutPanel1
@@ -85,16 +105,17 @@ Partial Class Biblioteca
         Me.TableLayoutPanel1.Controls.Add(Me.btnUsuarios, 3, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.btnLibros, 2, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 117)
-        Me.TableLayoutPanel1.MinimumSize = New System.Drawing.Size(0, 70)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 92)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TableLayoutPanel1.MinimumSize = New System.Drawing.Size(0, 56)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(40, 0, 40, 0)
+        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(36, 0, 36, 0)
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1472, 70)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1276, 56)
         Me.TableLayoutPanel1.TabIndex = 1
         '
         'btnUsuarios
@@ -104,9 +125,9 @@ Partial Class Biblioteca
         Me.btnUsuarios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
         Me.btnUsuarios.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnUsuarios.Location = New System.Drawing.Point(1087, 0)
+        Me.btnUsuarios.Location = New System.Drawing.Point(942, 0)
         Me.btnUsuarios.Name = "btnUsuarios"
-        Me.btnUsuarios.Size = New System.Drawing.Size(342, 70)
+        Me.btnUsuarios.Size = New System.Drawing.Size(295, 56)
         Me.btnUsuarios.TabIndex = 3
         Me.btnUsuarios.Text = "Usuarios"
         Me.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -118,9 +139,9 @@ Partial Class Biblioteca
         Me.btnLibros.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnLibros.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
         Me.btnLibros.ForeColor = System.Drawing.SystemColors.Window
-        Me.btnLibros.Location = New System.Drawing.Point(739, 0)
+        Me.btnLibros.Location = New System.Drawing.Point(641, 0)
         Me.btnLibros.Name = "btnLibros"
-        Me.btnLibros.Size = New System.Drawing.Size(342, 70)
+        Me.btnLibros.Size = New System.Drawing.Size(295, 56)
         Me.btnLibros.TabIndex = 2
         Me.btnLibros.Text = "Libros"
         Me.btnLibros.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -137,46 +158,15 @@ Partial Class Biblioteca
         Me.TableLayoutPanel2.Controls.Add(Me.btnCrearLibro, 2, 0)
         Me.TableLayoutPanel2.Controls.Add(btnCrearUsuario, 3, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel2.MinimumSize = New System.Drawing.Size(0, 78)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 2)
+        Me.TableLayoutPanel2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TableLayoutPanel2.MinimumSize = New System.Drawing.Size(0, 62)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.Padding = New System.Windows.Forms.Padding(40, 15, 40, 15)
+        Me.TableLayoutPanel2.Padding = New System.Windows.Forms.Padding(36, 12, 36, 12)
         Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1472, 108)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(1276, 86)
         Me.TableLayoutPanel2.TabIndex = 2
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.MenuText
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(3, 825)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1472, 416)
-        Me.Panel1.TabIndex = 3
-        '
-        'SqLiteCommand1
-        '
-        Me.SqLiteCommand1.CommandText = Nothing
-        '
-        'btnCrearUsuario
-        '
-        btnCrearUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        btnCrearUsuario.AutoSize = True
-        btnCrearUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(94, Byte), Integer))
-        btnCrearUsuario.borderRadius = 20
-        btnCrearUsuario.FlatAppearance.BorderSize = 0
-        btnCrearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        btnCrearUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        btnCrearUsuario.ForeColor = System.Drawing.Color.White
-        btnCrearUsuario.Location = New System.Drawing.Point(1145, 18)
-        btnCrearUsuario.MinimumSize = New System.Drawing.Size(0, 33)
-        btnCrearUsuario.Name = "btnCrearUsuario"
-        btnCrearUsuario.Padding = New System.Windows.Forms.Padding(7)
-        btnCrearUsuario.Size = New System.Drawing.Size(225, 72)
-        btnCrearUsuario.TabIndex = 2
-        btnCrearUsuario.Text = "Nuevo Usuario"
-        btnCrearUsuario.UseVisualStyleBackColor = False
         '
         'btnCrearLibro
         '
@@ -188,23 +178,39 @@ Partial Class Biblioteca
         Me.btnCrearLibro.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCrearLibro.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
         Me.btnCrearLibro.ForeColor = System.Drawing.Color.White
-        Me.btnCrearLibro.Location = New System.Drawing.Point(814, 18)
-        Me.btnCrearLibro.MinimumSize = New System.Drawing.Size(0, 33)
+        Me.btnCrearLibro.Location = New System.Drawing.Point(703, 14)
+        Me.btnCrearLibro.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnCrearLibro.MinimumSize = New System.Drawing.Size(0, 26)
         Me.btnCrearLibro.Name = "btnCrearLibro"
-        Me.btnCrearLibro.Padding = New System.Windows.Forms.Padding(7)
-        Me.btnCrearLibro.Size = New System.Drawing.Size(191, 72)
+        Me.btnCrearLibro.Padding = New System.Windows.Forms.Padding(6)
+        Me.btnCrearLibro.Size = New System.Drawing.Size(170, 58)
         Me.btnCrearLibro.TabIndex = 3
         Me.btnCrearLibro.Text = "Nuevo Libro"
         Me.btnCrearLibro.UseVisualStyleBackColor = False
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.MenuText
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(3, 852)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1276, 149)
+        Me.Panel1.TabIndex = 3
+        '
+        'SqLiteCommand1
+        '
+        Me.SqLiteCommand1.CommandText = Nothing
+        '
         'Biblioteca
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PapayaWhip
-        Me.ClientSize = New System.Drawing.Size(1478, 1244)
+        Me.ClientSize = New System.Drawing.Size(1282, 1003)
         Me.Controls.Add(Me.tlpFondo)
-        Me.MinimumSize = New System.Drawing.Size(1500, 1300)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MinimumSize = New System.Drawing.Size(1300, 47)
         Me.Name = "Biblioteca"
         Me.Text = "Biblioteca"
         Me.tlpFondo.ResumeLayout(False)

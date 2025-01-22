@@ -92,6 +92,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controlador\Controlador.vb" />
+    <Compile Include="modelo\Libro.vb" />
     <Compile Include="modelo\SQLLite.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -177,9 +179,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="controlador\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\BibliotecaDeControles\BibliotecaDeControles\BibliotecaDeControles.vbproj">
       <Project>{64AB96CA-0977-4311-A064-CCD25925924D}</Project>

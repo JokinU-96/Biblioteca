@@ -38,6 +38,7 @@
 
     Private Sub btnVisualizar_Click(sender As Object, e As EventArgs) Handles btnVisualizar.Click
         RaiseEvent visualizarUsuario()
+
     End Sub
 
     Public Event visualizarUsuario()

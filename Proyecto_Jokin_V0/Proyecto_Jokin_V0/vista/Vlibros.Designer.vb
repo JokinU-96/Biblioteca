@@ -23,90 +23,72 @@ Partial Class Vlibros
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.tlpFondo = New System.Windows.Forms.TableLayoutPanel()
-        Me.lblCatalogo = New System.Windows.Forms.Label()
         Me.CardLibro1 = New BibliotecaDeControles.CardLibro()
-        Me.CardLibro5 = New BibliotecaDeControles.CardLibro()
         Me.CardLibro4 = New BibliotecaDeControles.CardLibro()
         Me.CardLibro3 = New BibliotecaDeControles.CardLibro()
         Me.CardLibro2 = New BibliotecaDeControles.CardLibro()
+        Me.lblCatalogo = New System.Windows.Forms.Label()
+        Me.CardLibro5 = New BibliotecaDeControles.CardLibro()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.tlpFondo.SuspendLayout()
         Me.SuspendLayout()
         '
         'tlpFondo
         '
+        Me.tlpFondo.AutoScroll = True
         Me.tlpFondo.AutoSize = True
         Me.tlpFondo.BackColor = System.Drawing.SystemColors.Window
-        Me.tlpFondo.ColumnCount = 2
-        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300.0!))
-        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.tlpFondo.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
+        Me.tlpFondo.ColumnCount = 3
+        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
+        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46.0!))
         Me.tlpFondo.Controls.Add(Me.CardLibro1, 1, 2)
-        Me.tlpFondo.Controls.Add(Me.CardLibro5, 1, 6)
         Me.tlpFondo.Controls.Add(Me.CardLibro4, 1, 5)
         Me.tlpFondo.Controls.Add(Me.CardLibro3, 1, 4)
         Me.tlpFondo.Controls.Add(Me.CardLibro2, 1, 3)
         Me.tlpFondo.Controls.Add(Me.lblCatalogo, 1, 1)
+        Me.tlpFondo.Controls.Add(Me.CardLibro5, 1, 6)
+        Me.tlpFondo.Controls.Add(Me.Panel1, 0, 7)
         Me.tlpFondo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tlpFondo.Location = New System.Drawing.Point(10, 10)
+        Me.tlpFondo.Location = New System.Drawing.Point(9, 8)
+        Me.tlpFondo.Margin = New System.Windows.Forms.Padding(0)
         Me.tlpFondo.Name = "tlpFondo"
+        Me.tlpFondo.Padding = New System.Windows.Forms.Padding(10)
         Me.tlpFondo.RowCount = 8
-        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50.0!))
+        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150.0!))
-        Me.tlpFondo.Size = New System.Drawing.Size(1420, 2095)
+        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100.0!))
+        Me.tlpFondo.Size = New System.Drawing.Size(1132, 684)
         Me.tlpFondo.TabIndex = 1
-        '
-        'lblCatalogo
-        '
-        Me.lblCatalogo.AutoSize = True
-        Me.lblCatalogo.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCatalogo.Location = New System.Drawing.Point(303, 50)
-        Me.lblCatalogo.Name = "lblCatalogo"
-        Me.lblCatalogo.Size = New System.Drawing.Size(356, 91)
-        Me.lblCatalogo.TabIndex = 5
-        Me.lblCatalogo.Text = "Catálogo"
         '
         'CardLibro1
         '
         Me.CardLibro1.Autor = "Autor"
         Me.CardLibro1.AutoSize = True
         Me.CardLibro1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CardLibro1.Location = New System.Drawing.Point(303, 145)
-        Me.CardLibro1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.CardLibro1.MinimumSize = New System.Drawing.Size(900, 288)
+        Me.CardLibro1.Location = New System.Drawing.Point(223, 132)
+        Me.CardLibro1.MinimumSize = New System.Drawing.Size(800, 230)
         Me.CardLibro1.Name = "CardLibro1"
-        Me.CardLibro1.Padding = New System.Windows.Forms.Padding(10)
-        Me.CardLibro1.Size = New System.Drawing.Size(1114, 352)
+        Me.CardLibro1.Padding = New System.Windows.Forms.Padding(9, 8, 9, 8)
+        Me.CardLibro1.Size = New System.Drawing.Size(826, 230)
         Me.CardLibro1.TabIndex = 0
         Me.CardLibro1.Titulo = "Titulo"
-        '
-        'CardLibro5
-        '
-        Me.CardLibro5.Autor = "Autor"
-        Me.CardLibro5.AutoSize = True
-        Me.CardLibro5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CardLibro5.Location = New System.Drawing.Point(303, 1585)
-        Me.CardLibro5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.CardLibro5.MinimumSize = New System.Drawing.Size(900, 288)
-        Me.CardLibro5.Name = "CardLibro5"
-        Me.CardLibro5.Size = New System.Drawing.Size(1114, 352)
-        Me.CardLibro5.TabIndex = 4
-        Me.CardLibro5.Titulo = "Titulo"
         '
         'CardLibro4
         '
         Me.CardLibro4.Autor = "Autor"
         Me.CardLibro4.AutoSize = True
         Me.CardLibro4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CardLibro4.Location = New System.Drawing.Point(303, 1225)
-        Me.CardLibro4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.CardLibro4.MinimumSize = New System.Drawing.Size(900, 288)
+        Me.CardLibro4.Location = New System.Drawing.Point(223, 843)
+        Me.CardLibro4.MinimumSize = New System.Drawing.Size(800, 230)
         Me.CardLibro4.Name = "CardLibro4"
-        Me.CardLibro4.Size = New System.Drawing.Size(1114, 352)
+        Me.CardLibro4.Size = New System.Drawing.Size(826, 230)
         Me.CardLibro4.TabIndex = 3
         Me.CardLibro4.Titulo = "Titulo"
         '
@@ -115,11 +97,10 @@ Partial Class Vlibros
         Me.CardLibro3.Autor = "Autor"
         Me.CardLibro3.AutoSize = True
         Me.CardLibro3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CardLibro3.Location = New System.Drawing.Point(303, 865)
-        Me.CardLibro3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.CardLibro3.MinimumSize = New System.Drawing.Size(900, 288)
+        Me.CardLibro3.Location = New System.Drawing.Point(223, 606)
+        Me.CardLibro3.MinimumSize = New System.Drawing.Size(800, 230)
         Me.CardLibro3.Name = "CardLibro3"
-        Me.CardLibro3.Size = New System.Drawing.Size(1114, 352)
+        Me.CardLibro3.Size = New System.Drawing.Size(826, 230)
         Me.CardLibro3.TabIndex = 2
         Me.CardLibro3.Titulo = "Titulo"
         '
@@ -128,26 +109,57 @@ Partial Class Vlibros
         Me.CardLibro2.Autor = "Autor"
         Me.CardLibro2.AutoSize = True
         Me.CardLibro2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CardLibro2.Location = New System.Drawing.Point(303, 505)
-        Me.CardLibro2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.CardLibro2.MinimumSize = New System.Drawing.Size(900, 288)
+        Me.CardLibro2.Location = New System.Drawing.Point(223, 369)
+        Me.CardLibro2.MinimumSize = New System.Drawing.Size(800, 230)
         Me.CardLibro2.Name = "CardLibro2"
-        Me.CardLibro2.Size = New System.Drawing.Size(1114, 352)
+        Me.CardLibro2.Size = New System.Drawing.Size(826, 230)
         Me.CardLibro2.TabIndex = 1
         Me.CardLibro2.Titulo = "Titulo"
         '
+        'lblCatalogo
+        '
+        Me.lblCatalogo.AutoSize = True
+        Me.lblCatalogo.Font = New System.Drawing.Font("Microsoft Sans Serif", 40.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCatalogo.Location = New System.Drawing.Point(223, 52)
+        Me.lblCatalogo.Name = "lblCatalogo"
+        Me.lblCatalogo.Size = New System.Drawing.Size(298, 76)
+        Me.lblCatalogo.TabIndex = 5
+        Me.lblCatalogo.Text = "Catálogo"
+        '
+        'CardLibro5
+        '
+        Me.CardLibro5.Autor = "Autor"
+        Me.CardLibro5.AutoSize = True
+        Me.CardLibro5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CardLibro5.Location = New System.Drawing.Point(223, 1080)
+        Me.CardLibro5.MinimumSize = New System.Drawing.Size(800, 230)
+        Me.CardLibro5.Name = "CardLibro5"
+        Me.CardLibro5.Size = New System.Drawing.Size(826, 230)
+        Me.CardLibro5.TabIndex = 4
+        Me.CardLibro5.Titulo = "Titulo"
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.SystemColors.InfoText
+        Me.tlpFondo.SetColumnSpan(Me.Panel1, 3)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(14, 1317)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1083, 94)
+        Me.Panel1.TabIndex = 6
+        '
         'Vlibros
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.Window
-        Me.ClientSize = New System.Drawing.Size(1440, 2115)
+        Me.ClientSize = New System.Drawing.Size(1150, 700)
         Me.Controls.Add(Me.tlpFondo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.MinimumSize = New System.Drawing.Size(1440, 0)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MinimumSize = New System.Drawing.Size(1150, 700)
         Me.Name = "Vlibros"
-        Me.Padding = New System.Windows.Forms.Padding(10)
+        Me.Padding = New System.Windows.Forms.Padding(9, 8, 9, 8)
         Me.Text = "Vlibros"
         Me.tlpFondo.ResumeLayout(False)
         Me.tlpFondo.PerformLayout()
@@ -163,4 +175,5 @@ Partial Class Vlibros
     Friend WithEvents CardLibro3 As BibliotecaDeControles.CardLibro
     Friend WithEvents CardLibro2 As BibliotecaDeControles.CardLibro
     Friend WithEvents lblCatalogo As Label
+    Friend WithEvents Panel1 As Panel
 End Class
