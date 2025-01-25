@@ -44,3 +44,13 @@ C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeCont
 C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\System.Data.SQLite.xml
 C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\Bibliote.7CE4E203.Up2Date
+C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\BibliotecaDeControles.dll.config
+C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\EntityFramework.dll
+C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\System.Data.SQLite.dll
+C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\EntityFramework.xml
+C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\bin\Debug\System.Data.SQLite.xml
+C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\BibliotecaDeControles\BibliotecaDeControles\obj\Debug\Bibliote.7CE4E203.Up2Date

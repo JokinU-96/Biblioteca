@@ -35,20 +35,20 @@ Public Class Biblioteca
 
         'Cargo los libros desde la base de datos a la tabla de libros'
         miControlador.cargarLibros()
-        'nuevaTabla()
+        nuevaTabla()
     End Sub
 
 
 
     Function nuevaTabla()
         Dim fila = 0
+        'Añado una fila.
+        tlpFondo.RowCount = miControlador.libros.Count + 2
+
         'Voy creando las filas y los libros uno a uno.
         For Each libro In miControlador.libros
 
             fila += 1 'cambio a la primera fila (0: encabezado)
-
-            'Añado una fila.
-            tlpFondo.RowCount = fila
 
             'Añado una fila en el array de filas pero reemplazando antes las que ya están creadas.
             If fila < tlpFondo.RowStyles.Count Then
@@ -75,7 +75,6 @@ Public Class Biblioteca
         Next
 
         'El pie de página y el panel final de color negro
-        tlpFondo.RowCount = fila + 1
         tlpFondo.Controls.Add(Panel1, 0, fila + 1)
         tlpFondo.RowStyles.Add(New RowStyle(SizeType.Absolute, 100.0!)) 'n: Pie de página
     End Function
