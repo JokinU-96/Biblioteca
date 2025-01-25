@@ -34,89 +34,50 @@ Public Class Biblioteca
         btnUsuarios.ForeColor = cambiarColor(colorBlanco)
 
         'Cargo los libros desde la base de datos a la tabla de libros'
-        nuevaTabla(miControlador.cargarLibros())
+        miControlador.cargarLibros()
+        'nuevaTabla()
     End Sub
 
 
 
     Function nuevaTabla()
-        tlpFondo = New TableLayoutPanel()
+        Dim fila = 0
+        'Voy creando las filas y los libros uno a uno.
+        For Each libro In miControlador.libros
 
-        '
-        'tlpFondo
-        '
+            fila += 1 'cambio a la primera fila (0: encabezado)
 
-        'Añado el nombre de la tabla.
-        'tlpFondo.Name = "tlpFondo"
+            'Añado una fila.
+            tlpFondo.RowCount = fila
 
-        'Añado la cantidad de filas (cantidad de libros + encabezado + pie de pagina).
-        tlpFondo.RowCount = miControlador.libros.Count
+            'Añado una fila en el array de filas pero reemplazando antes las que ya están creadas.
+            If fila < tlpFondo.RowStyles.Count Then
+                tlpFondo.RowStyles(fila) = New RowStyle() 'reemplazo el viejo contenido de la fila por el nuevo.
+            Else
+                tlpFondo.RowStyles.Add(New RowStyle()) 'cuando no haya RowStyles creadas, añado una.
+            End If
 
-        'Añado la cantidad de columnnas.
-        'tlpFondo.ColumnCount = 3
+            '
+            'CardLibro1
+            'Creo el cardLibro para asignarlo a la fila anterior
+            Dim CardLibro = New CardLibro()
+            tlpFondo.Controls.Add(CardLibro, fila, 2) 'Le asigno su fila.
+            CardLibro.Titulo = libro.titulo
+            CardLibro.Autor = libro.autor
+            CardLibro.AutoSize = True
+            CardLibro.Dock = DockStyle.Fill
+            CardLibro.Location = New Point(223, 132)
+            CardLibro.MinimumSize = New Size(800, 230)
+            CardLibro.Name = 'ID del libro (PENDIENTE)
+            CardLibro.Padding = New Padding(9, 8, 9, 8)
+            CardLibro.Size = New Size(826, 230)
+            CardLibro.TabIndex = fila
+        Next
 
-        'Instancio un control de usuario para libros.
-        Dim CardLibro = New CardLibro()
-
-        'Añado elementos en las celdas de la tabla.
-        tlpFondo.Controls.Add(CardLibro, 1, 2)
-
-        '
-        'CardLibro1
-        '
-        CardLibro.Titulo = "Titulo"
-        CardLibro.Autor = "Autor"
-        CardLibro.AutoSize = True
-        CardLibro.Dock = DockStyle.Fill
-        CardLibro.Location = New Point(223, 132)
-        CardLibro.MinimumSize = New Size(800, 230)
-        CardLibro.Name = 'ID del libro
-        CardLibro.Padding = New Padding(9, 8, 9, 8)
-        CardLibro.Size = New Size(826, 230)
-        CardLibro.TabIndex = 0 'El iterador del For
-
-        'Tengo que crear uno cada vez
-        '   tlpFondo.Controls.Add(CardLibro4, 1, 5)
-        '   tlpFondo.Controls.Add(Me.CardLibro3, 1, 4)
-        '   tlpFondo.Controls.Add(Me.CardLibro2, 1, 3)
-        '   tlpFondo.Controls.Add(Me.CardLibro5, 1, 6)
-
-        '   El encabezado.
-        'tlpFondo.Controls.Add(lblCatalogo, 1, 1)
-
-        '   El panel final de color negro
-        'tlpFondo.Controls.Add(Me.Panel1, 0, 7)
-
-        'Estilo de las filas.
-        tlpFondo.RowStyles.Add(New RowStyle(SizeType.Absolute, 40.0!)) '0: Margen superior
-        tlpFondo.RowStyles.Add(New RowStyle()) '1
-        tlpFondo.RowStyles.Add(New RowStyle()) '2
-        tlpFondo.RowStyles.Add(New RowStyle()) '3
-        tlpFondo.RowStyles.Add(New RowStyle()) '3
-        tlpFondo.RowStyles.Add(New RowStyle()) '4
-        tlpFondo.RowStyles.Add(New RowStyle()) '5
+        'El pie de página y el panel final de color negro
+        tlpFondo.RowCount = fila + 1
+        tlpFondo.Controls.Add(Panel1, 0, fila + 1)
         tlpFondo.RowStyles.Add(New RowStyle(SizeType.Absolute, 100.0!)) 'n: Pie de página
-
-        'HEREDADO
-
-        'Estilo de las columnas
-        'tlpFondo.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 20.0!))
-        'tlpFondo.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 80.0!))
-        'tlpFondo.ColumnStyles.Add(New ColumnStyle(SizeType.Absolute, 44.0!))
-
-        'Dimensiones iniciales.
-        'tlpFondo.Size = New System.Drawing.Size(1132, 684)
-
-        'Resto de propiedades.
-        'tlpFondo.AutoScroll = True
-        'tlpFondo.AutoSize = True
-        'tlpFondo.BackColor = SystemColors.Window
-        'tlpFondo.CellBorderStyle = TableLayoutPanelCellBorderStyle.[Single]
-        'tlpFondo.Dock = System.Windows.Forms.DockStyle.Fill
-        'tlpFondo.Location = New System.Drawing.Point(9, 8)
-        'tlpFondo.Margin = New System.Windows.Forms.Padding(0)
-        'tlpFondo.Padding = New System.Windows.Forms.Padding(10)
-        'tlpFondo.TabIndex = 1
     End Function
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click

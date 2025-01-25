@@ -18,7 +18,5 @@ Public Class Controlador
             Dim libro As Libro = New Libro(titulo, autor, sinopsis, edicion)
             libros.Append(libro)
         End While
-
-        Return libros
     End Function
 End Class

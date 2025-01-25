@@ -1,30 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\",
+  "WorkspaceRootPath": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|c:\\users\\j_oki\\escritorio\\2\u00BA\\desarrollo de interfaces\\proyecto\\biblioteca\\proyecto_jokin_v0\\proyecto_jokin_v0\\vista\\biblioteca.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\proyecto_jokin_v0\\vista\\biblioteca.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|solutionrelative:proyecto_jokin_v0\\vista\\biblioteca.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|c:\\users\\j_oki\\escritorio\\2\u00BA\\desarrollo de interfaces\\proyecto\\biblioteca\\proyecto_jokin_v0\\proyecto_jokin_v0\\vista\\vlibros.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\proyecto_jokin_v0\\vista\\vusuarios.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|solutionrelative:proyecto_jokin_v0\\vista\\vusuarios.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\proyecto_jokin_v0\\vista\\vusuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|solutionrelative:proyecto_jokin_v0\\vista\\vusuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\proyecto_jokin_v0\\vista\\biblioteca.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|solutionrelative:proyecto_jokin_v0\\vista\\biblioteca.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\proyecto_jokin_v0\\vista\\biblioteca.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|solutionrelative:proyecto_jokin_v0\\vista\\biblioteca.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|c:\\users\\j_oki\\documents\\egibide\\curso_2\\visualbasic\\biblioteca\\proyecto_jokin_v0\\proyecto_jokin_v0\\vista\\vlibros.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|solutionrelative:proyecto_jokin_v0\\vista\\vlibros.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|c:\\users\\j_oki\\escritorio\\2\u00BA\\desarrollo de interfaces\\proyecto\\biblioteca\\proyecto_jokin_v0\\proyecto_jokin_v0\\modelo\\libro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|solutionrelative:proyecto_jokin_v0\\modelo\\libro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|c:\\users\\j_oki\\escritorio\\2\u00BA\\desarrollo de interfaces\\proyecto\\biblioteca\\proyecto_jokin_v0\\proyecto_jokin_v0\\controlador\\controlador.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|c:\\users\\j_oki\\documents\\egibide\\curso_2\\visualbasic\\biblioteca\\proyecto_jokin_v0\\proyecto_jokin_v0\\controlador\\controlador.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|solutionrelative:proyecto_jokin_v0\\controlador\\controlador.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|c:\\users\\j_oki\\escritorio\\2\u00BA\\desarrollo de interfaces\\proyecto\\biblioteca\\proyecto_jokin_v0\\proyecto_jokin_v0\\vista\\vlibros.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|solutionrelative:proyecto_jokin_v0\\vista\\vlibros.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|c:\\users\\j_oki\\escritorio\\2\u00BA\\desarrollo de interfaces\\proyecto\\biblioteca\\proyecto_jokin_v0\\proyecto_jokin_v0\\vista\\vusuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|solutionrelative:proyecto_jokin_v0\\vista\\vusuarios.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +38,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Controlador.vb",
-              "DocumentMoniker": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\controlador\\Controlador.vb",
+              "DocumentMoniker": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\controlador\\Controlador.vb",
               "RelativeDocumentMoniker": "Proyecto_Jokin_V0\\controlador\\Controlador.vb",
-              "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\controlador\\Controlador.vb",
+              "ToolTip": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\controlador\\Controlador.vb",
               "RelativeToolTip": "Proyecto_Jokin_V0\\controlador\\Controlador.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-22T20:34:29.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Libro.vb",
-              "DocumentMoniker": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\modelo\\Libro.vb",
-              "RelativeDocumentMoniker": "Proyecto_Jokin_V0\\modelo\\Libro.vb",
-              "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\modelo\\Libro.vb",
-              "RelativeToolTip": "Proyecto_Jokin_V0\\modelo\\Libro.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-22T20:32:40.569Z",
+              "WhenOpened": "2025-01-25T09:20:40.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Vlibros.vb [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Vlibros.vb",
-              "RelativeDocumentMoniker": "Proyecto_Jokin_V0\\vista\\Vlibros.vb",
-              "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Vlibros.vb [Dise\u00F1o]",
-              "RelativeToolTip": "Proyecto_Jokin_V0\\vista\\Vlibros.vb [Dise\u00F1o]",
+              "Title": "Vusuarios.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Vusuarios.Designer.vb",
+              "RelativeDocumentMoniker": "Proyecto_Jokin_V0\\vista\\Vusuarios.Designer.vb",
+              "ToolTip": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Vusuarios.Designer.vb",
+              "RelativeToolTip": "Proyecto_Jokin_V0\\vista\\Vusuarios.Designer.vb",
+              "ViewState": "AgIAABgAAAAAAAAAAAASwDcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-22T20:21:35.431Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Vusuarios.vb",
-              "DocumentMoniker": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Vusuarios.vb",
-              "RelativeDocumentMoniker": "Proyecto_Jokin_V0\\vista\\Vusuarios.vb",
-              "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Vusuarios.vb",
-              "RelativeToolTip": "Proyecto_Jokin_V0\\vista\\Vusuarios.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-22T19:34:37.726Z",
+              "WhenOpened": "2025-01-18T17:45:38.094Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Biblioteca.vb",
-              "DocumentMoniker": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Biblioteca.vb",
+              "DocumentMoniker": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Biblioteca.vb",
               "RelativeDocumentMoniker": "Proyecto_Jokin_V0\\vista\\Biblioteca.vb",
-              "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Biblioteca.vb",
+              "ToolTip": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Biblioteca.vb",
               "RelativeToolTip": "Proyecto_Jokin_V0\\vista\\Biblioteca.vb",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwDcAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAuwEwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-22T18:57:59.449Z",
+              "WhenOpened": "2025-01-18T11:49:09.613Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Vlibros.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Vlibros.Designer.vb",
-              "RelativeDocumentMoniker": "Proyecto_Jokin_V0\\vista\\Vlibros.Designer.vb",
-              "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Vlibros.Designer.vb",
-              "RelativeToolTip": "Proyecto_Jokin_V0\\vista\\Vlibros.Designer.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Vusuarios.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Vusuarios.vb",
+              "RelativeDocumentMoniker": "Proyecto_Jokin_V0\\vista\\Vusuarios.vb",
+              "ToolTip": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Vusuarios.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto_Jokin_V0\\vista\\Vusuarios.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-22T18:55:59.917Z",
+              "WhenOpened": "2025-01-18T17:30:19.443Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Biblioteca.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Biblioteca.vb",
+              "RelativeDocumentMoniker": "Proyecto_Jokin_V0\\vista\\Biblioteca.vb",
+              "ToolTip": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Biblioteca.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto_Jokin_V0\\vista\\Biblioteca.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-01-18T10:29:08.754Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Biblioteca.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Biblioteca.Designer.vb",
+              "RelativeDocumentMoniker": "Proyecto_Jokin_V0\\vista\\Biblioteca.Designer.vb",
+              "ToolTip": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Biblioteca.Designer.vb",
+              "RelativeToolTip": "Proyecto_Jokin_V0\\vista\\Biblioteca.Designer.vb",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAlwLsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-01-19T10:53:56.136Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Vlibros.vb [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Vlibros.vb",
+              "RelativeDocumentMoniker": "Proyecto_Jokin_V0\\vista\\Vlibros.vb",
+              "ToolTip": "C:\\Users\\j_oki\\Documents\\Egibide\\curso_2\\VisualBasic\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Vlibros.vb [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto_Jokin_V0\\vista\\Vlibros.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-01-18T10:28:01.863Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
