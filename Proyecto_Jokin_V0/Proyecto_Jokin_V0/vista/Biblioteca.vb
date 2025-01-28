@@ -43,7 +43,7 @@ Public Class Biblioteca
     Function nuevaTabla()
         Dim fila = 0
         'Añado una fila.
-        tlpFondo.RowCount = miControlador.libros.Count + 2
+        Vlibros.tlpFondo.RowCount = miControlador.libros.Count + 2
 
         'Voy creando las filas y los libros uno a uno.
         For Each libro In miControlador.libros
@@ -51,32 +51,32 @@ Public Class Biblioteca
             fila += 1 'cambio a la primera fila (0: encabezado)
 
             'Añado una fila en el array de filas pero reemplazando antes las que ya están creadas.
-            If fila < tlpFondo.RowStyles.Count Then
-                tlpFondo.RowStyles(fila) = New RowStyle() 'reemplazo el viejo contenido de la fila por el nuevo.
+            If fila < Vlibros.tlpFondo.RowStyles.Count Then
+                Vlibros.tlpFondo.RowStyles(fila) = New RowStyle() 'reemplazo el viejo contenido de la fila por el nuevo.
             Else
-                tlpFondo.RowStyles.Add(New RowStyle()) 'cuando no haya RowStyles creadas, añado una.
+                Vlibros.tlpFondo.RowStyles.Add(New RowStyle()) 'cuando no haya RowStyles creadas, añado una.
             End If
 
             '
             'CardLibro1
             'Creo el cardLibro para asignarlo a la fila anterior
             Dim CardLibro = New CardLibro()
-            tlpFondo.Controls.Add(CardLibro, fila, 2) 'Le asigno su fila.
+            Vlibros.tlpFondo.Controls.Add(CardLibro, fila, 2) 'Le asigno su fila.
             CardLibro.Titulo = libro.titulo
             CardLibro.Autor = libro.autor
             CardLibro.AutoSize = True
             CardLibro.Dock = DockStyle.Fill
             CardLibro.Location = New Point(223, 132)
             CardLibro.MinimumSize = New Size(800, 230)
-            CardLibro.Name = 'ID del libro (PENDIENTE)
+            CardLibro.Name = fila 'ID del libro (PENDIENTE)
             CardLibro.Padding = New Padding(9, 8, 9, 8)
             CardLibro.Size = New Size(826, 230)
             CardLibro.TabIndex = fila
         Next
 
         'El pie de página y el panel final de color negro
-        tlpFondo.Controls.Add(Panel1, 0, fila + 1)
-        tlpFondo.RowStyles.Add(New RowStyle(SizeType.Absolute, 100.0!)) 'n: Pie de página
+        Vlibros.tlpFondo.Controls.Add(Panel1, 0, fila + 1)
+        Vlibros.tlpFondo.RowStyles.Add(New RowStyle(SizeType.Absolute, 100.0!)) 'n: Pie de página
     End Function
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click

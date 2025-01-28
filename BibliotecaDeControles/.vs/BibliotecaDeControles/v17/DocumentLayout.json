@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\BibliotecaDeControles\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{64AB96CA-0977-4311-A064-CCD25925924D}|BibliotecaDeControles\\BibliotecaDeControles.vbproj|C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\BibliotecaDeControles\\bibliotecadecontroles\\cardusuario.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{64AB96CA-0977-4311-A064-CCD25925924D}|BibliotecaDeControles\\BibliotecaDeControles.vbproj|c:\\users\\j_oki\\escritorio\\2\u00BA\\desarrollo de interfaces\\proyecto\\biblioteca\\bibliotecadecontroles\\bibliotecadecontroles\\cardusuario.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{64AB96CA-0977-4311-A064-CCD25925924D}|BibliotecaDeControles\\BibliotecaDeControles.vbproj|solutionrelative:bibliotecadecontroles\\cardusuario.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{64AB96CA-0977-4311-A064-CCD25925924D}|BibliotecaDeControles\\BibliotecaDeControles.vbproj|solutionrelative:bibliotecadecontroles\\cardusuario.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64AB96CA-0977-4311-A064-CCD25925924D}|BibliotecaDeControles\\BibliotecaDeControles.vbproj|c:\\users\\j_oki\\escritorio\\2\u00BA\\desarrollo de interfaces\\proyecto\\biblioteca\\bibliotecadecontroles\\bibliotecadecontroles\\cardlibro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{64AB96CA-0977-4311-A064-CCD25925924D}|BibliotecaDeControles\\BibliotecaDeControles.vbproj|C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\BibliotecaDeControles\\bibliotecadecontroles\\cardlibro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{64AB96CA-0977-4311-A064-CCD25925924D}|BibliotecaDeControles\\BibliotecaDeControles.vbproj|solutionrelative:bibliotecadecontroles\\cardlibro.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
@@ -38,8 +38,7 @@
               "RelativeToolTip": "BibliotecaDeControles\\CardLibro.vb",
               "ViewState": "AgIAAAYAAAAAAAAAAAAqwBoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-22T19:31:45.772Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T19:31:45.772Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "BibliotecaDeControles\\CardUsuario.vb",
               "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\BibliotecaDeControles\\BibliotecaDeControles\\CardUsuario.vb",
               "RelativeToolTip": "BibliotecaDeControles\\CardUsuario.vb",
-              "ViewState": "AgIAABYAAAAAAAAAAAAcwCgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-01-18T17:01:43.083Z",
               "EditorCaption": ""
@@ -63,8 +62,7 @@
               "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\BibliotecaDeControles\\BibliotecaDeControles\\CardUsuario.vb [Dise\u00F1o]",
               "RelativeToolTip": "BibliotecaDeControles\\CardUsuario.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-18T17:01:31.55Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-01-18T17:01:31.55Z"
             },
             {
               "$type": "Document",
@@ -75,8 +73,7 @@
               "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\BibliotecaDeControles\\BibliotecaDeControles\\CardLibro.vb [Dise\u00F1o]",
               "RelativeToolTip": "BibliotecaDeControles\\CardLibro.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-01-08T20:51:55.379Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-01-08T20:51:55.379Z"
             }
           ]
         }
