@@ -53,7 +53,9 @@ Partial Class Vusuarios
         Me.tlpFondo.Margin = New System.Windows.Forms.Padding(0)
         Me.tlpFondo.Name = "tlpFondo"
         Me.tlpFondo.Padding = New System.Windows.Forms.Padding(10)
+
         Me.tlpFondo.RowCount = 8
+
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())

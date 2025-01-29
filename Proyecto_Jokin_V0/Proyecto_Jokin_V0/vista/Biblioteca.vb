@@ -7,6 +7,8 @@ Public Class Biblioteca
 
     Dim miControlador As New Controlador
 
+    Dim controlesLibro As List(Of CardLibro) = New List(Of CardLibro)()
+
     Dim c = 0
     Dim colorVerde = New Integer() {67, 114, 94}
     Dim colorBlanco = New Integer() {255, 255, 255}
@@ -34,6 +36,7 @@ Public Class Biblioteca
         btnUsuarios.ForeColor = cambiarColor(colorBlanco)
 
         'Cargo los libros desde la base de datos a la tabla de libros'
+        miControlador.libros.Clear()
         miControlador.cargarLibros()
         nuevaTabla()
     End Sub
@@ -41,42 +44,69 @@ Public Class Biblioteca
 
 
     Function nuevaTabla()
+
         Dim fila = 0
-        'Añado una fila.
-        Vlibros.tlpFondo.RowCount = miControlador.libros.Count + 2
 
-        'Voy creando las filas y los libros uno a uno.
-        For Each libro In miControlador.libros
+        Dim nuevosLibros As List(Of CardLibro) = New List(Of CardLibro)()
 
-            fila += 1 'cambio a la primera fila (0: encabezado)
-
-            'Añado una fila en el array de filas pero reemplazando antes las que ya están creadas.
-            If fila < Vlibros.tlpFondo.RowStyles.Count Then
-                Vlibros.tlpFondo.RowStyles(fila) = New RowStyle() 'reemplazo el viejo contenido de la fila por el nuevo.
-            Else
-                Vlibros.tlpFondo.RowStyles.Add(New RowStyle()) 'cuando no haya RowStyles creadas, añado una.
+        For i As Integer = 0 To miControlador.libros.Count - 1
+            Dim encontrado = False
+            If controlesLibro.Count > 0 Then
+                For j As Integer = 0 To controlesLibro.Count - 1
+                    If miControlador.libros(i).titulo = controlesLibro(j).Titulo Then
+                        encontrado = True
+                    End If
+                Next
             End If
 
-            '
-            'CardLibro1
-            'Creo el cardLibro para asignarlo a la fila anterior
-            Dim CardLibro = New CardLibro()
-            Vlibros.tlpFondo.Controls.Add(CardLibro, fila, 2) 'Le asigno su fila.
-            CardLibro.Titulo = libro.titulo
-            CardLibro.Autor = libro.autor
-            CardLibro.AutoSize = True
-            CardLibro.Dock = DockStyle.Fill
-            CardLibro.Location = New Point(223, 132)
-            CardLibro.MinimumSize = New Size(800, 230)
-            CardLibro.Name = fila 'ID del libro (PENDIENTE)
-            CardLibro.Padding = New Padding(9, 8, 9, 8)
-            CardLibro.Size = New Size(826, 230)
-            CardLibro.TabIndex = fila
+            If Not encontrado Then
+                nuevosLibros.Add(New CardLibro())
+            End If
         Next
 
+        controlesLibro.AddRange(nuevosLibros)
+
+        Vlibros.tlpFondo.SuspendLayout()
+
+        For i As Integer = 0 To controlesLibro.Count - 1
+            Vlibros.tlpFondo.Controls.Add(controlesLibro(i), 0, fila) 'Le asigno su fila
+        Next
+
+        Vlibros.tlpFondo.RowCount = controlesLibro.Count + 3
+
+        fila += 1 'cambio a la primera fila (0: margen)
+        fila += 1 'cambio a la segunda fila (1: encabezado)
+
+        For i As Integer = 0 To controlesLibro.Count - 1
+            Vlibros.tlpFondo.RowStyles.Add(New RowStyle(SizeType.AutoSize))
+        Next
+
+        tlpFondo.RowStyles.Add(New RowStyle(SizeType.Absolute, 120.0!))
+        Dim YO As Integer = 132
+
+        For i As Integer = 0 To controlesLibro.Count - 1
+
+            controlesLibro(i).Titulo = miControlador.libros(i).titulo
+            controlesLibro(i).Autor = miControlador.libros(i).autor
+            controlesLibro(i).AutoSize = True
+            controlesLibro(i).Dock = DockStyle.Fill
+            controlesLibro(i).Location = New Point(227, YO)
+            controlesLibro(i).MinimumSize = New Size(800, 230)
+            controlesLibro(i).Name = fila 'ID del libro (PENDIENTE)
+            controlesLibro(i).Padding = New Padding(9, 8, 9, 8)
+            controlesLibro(i).Size = New Size(800, 230)
+            controlesLibro(i).TabIndex = fila
+
+            fila += 1 'avanzo con las filas
+            YO += 237 'avanzo con las coordenadas en vertical
+        Next
+
+        Vlibros.tlpFondo.ResumeLayout(False)
+        Vlibros.tlpFondo.PerformLayout()
+
         'El pie de página y el panel final de color negro
-        Vlibros.tlpFondo.Controls.Add(Panel1, 0, fila + 1)
-        Vlibros.tlpFondo.RowStyles.Add(New RowStyle(SizeType.Absolute, 100.0!)) 'n: Pie de página
+        'Vlibros.tlpFondo.RowStyles.Add(New RowStyle(SizeType.Absolute, 100.0!)) 'n: Pie de página
+        'Vlibros.tlpFondo.Controls.Add(Panel1, fila + 1, 0)
     End Function
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
@@ -94,5 +124,9 @@ Public Class Biblioteca
     Private Sub PanelPrincipal_Resize(sender As Object, e As EventArgs) Handles PanelPrincipal.Resize
         Vlibros.Width = PanelPrincipal.Width
         Vusuarios.Width = PanelPrincipal.Width
+    End Sub
+
+    Private Sub btnCrearLibro_Click(sender As Object, e As EventArgs) Handles btnCrearLibro.Click
+
     End Sub
 End Class
