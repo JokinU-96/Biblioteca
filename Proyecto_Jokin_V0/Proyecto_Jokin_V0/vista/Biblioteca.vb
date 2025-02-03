@@ -5,7 +5,7 @@ Imports BibliotecaDeControles
 Public Class Biblioteca
     Dim mostrado As Boolean = False
 
-    Dim miControlador As New Controlador
+    Public miControlador As New Controlador
 
     Dim controlesLibro As List(Of CardLibro) = New List(Of CardLibro)()
 
@@ -36,7 +36,6 @@ Public Class Biblioteca
         btnUsuarios.ForeColor = cambiarColor(colorBlanco)
 
         'Cargo los libros desde la base de datos a la tabla de libros'
-        miControlador.libros.Clear()
         miControlador.cargarLibros()
         nuevaTabla()
     End Sub
@@ -127,6 +126,10 @@ Public Class Biblioteca
     End Sub
 
     Private Sub btnCrearLibro_Click(sender As Object, e As EventArgs) Handles btnCrearLibro.Click
+        VNuevoLibro.Show()
+    End Sub
 
+    Private Sub Biblioteca_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        miControlador.cargarLibros()
     End Sub
 End Class

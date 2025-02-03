@@ -129,6 +129,12 @@
     <Compile Include="vista\Vlibros.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\VNuevoLibro.Designer.vb">
+      <DependentUpon>VNuevoLibro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\VNuevoLibro.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\Vusuario.Designer.vb">
       <DependentUpon>Vusuario.vb</DependentUpon>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Vlibros.resx">
       <DependentUpon>Vlibros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\VNuevoLibro.resx">
+      <DependentUpon>VNuevoLibro.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Vusuario.resx">
       <DependentUpon>Vusuario.vb</DependentUpon>

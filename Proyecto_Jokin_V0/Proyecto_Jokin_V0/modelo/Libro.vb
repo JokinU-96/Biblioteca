@@ -4,10 +4,13 @@
     Property sinopsis As String
     Property edicion As Integer
 
-    Public Sub New(titulo As String, autor As String, sinopsis As String, edicion As Integer)
+    Property ID As Integer
+
+    Public Sub New(titulo As String, autor As String, sinopsis As String, edicion As Integer, iD As Integer)
         Me.titulo = titulo
         Me.autor = autor
         Me.sinopsis = sinopsis
         Me.edicion = edicion
+        Me.ID = iD
     End Sub
 End Class

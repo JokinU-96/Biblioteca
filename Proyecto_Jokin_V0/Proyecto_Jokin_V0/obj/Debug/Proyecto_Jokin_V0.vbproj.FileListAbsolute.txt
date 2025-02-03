@@ -76,3 +76,4 @@ C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\Proye
 C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\Proyecto_Jokin_V0\Proyecto_Jokin_V0\obj\Debug\Proyecto_Jokin_V0.pdb
 C:\Users\j_oki\Documents\Egibide\curso_2\VisualBasic\Biblioteca\Proyecto_Jokin_V0\Proyecto_Jokin_V0\bin\Debug\BibliotecaDeControles.dll.config
 C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\Proyecto_Jokin_V0\Proyecto_Jokin_V0\bin\Debug\BibliotecaDeControles.dll.config
+C:\Users\j_oki\Escritorio\2º\Desarrollo de Interfaces\Proyecto\Biblioteca\Proyecto_Jokin_V0\Proyecto_Jokin_V0\obj\Debug\Proyecto_Jokin_V0.VNuevoLibro.resources

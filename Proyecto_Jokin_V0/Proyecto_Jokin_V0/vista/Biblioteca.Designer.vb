@@ -29,14 +29,34 @@ Partial Class Biblioteca
         Me.btnUsuarios = New System.Windows.Forms.Label()
         Me.btnLibros = New System.Windows.Forms.Label()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.btnCrearLibro = New BibliotecaDeControles.BotonRedondeado()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SqLiteCommand1 = New System.Data.SQLite.SQLiteCommand()
-        Me.btnCrearLibro = New BibliotecaDeControles.BotonRedondeado()
         btnCrearUsuario = New BibliotecaDeControles.BotonRedondeado()
         Me.tlpFondo.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'btnCrearUsuario
+        '
+        btnCrearUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        btnCrearUsuario.AutoSize = True
+        btnCrearUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(94, Byte), Integer))
+        btnCrearUsuario.borderRadius = 20
+        btnCrearUsuario.FlatAppearance.BorderSize = 0
+        btnCrearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        btnCrearUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
+        btnCrearUsuario.ForeColor = System.Drawing.Color.White
+        btnCrearUsuario.Location = New System.Drawing.Point(989, 14)
+        btnCrearUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        btnCrearUsuario.MinimumSize = New System.Drawing.Size(0, 26)
+        btnCrearUsuario.Name = "btnCrearUsuario"
+        btnCrearUsuario.Padding = New System.Windows.Forms.Padding(6)
+        btnCrearUsuario.Size = New System.Drawing.Size(200, 58)
+        btnCrearUsuario.TabIndex = 2
+        btnCrearUsuario.Text = "Nuevo Usuario"
+        btnCrearUsuario.UseVisualStyleBackColor = False
         '
         'tlpFondo
         '
@@ -148,20 +168,6 @@ Partial Class Biblioteca
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(1276, 86)
         Me.TableLayoutPanel2.TabIndex = 2
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.MenuText
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel1.Location = New System.Drawing.Point(3, 852)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1276, 149)
-        Me.Panel1.TabIndex = 3
-        '
-        'SqLiteCommand1
-        '
-        Me.SqLiteCommand1.CommandText = Nothing
-        '
         'btnCrearLibro
         '
         Me.btnCrearLibro.Anchor = System.Windows.Forms.AnchorStyles.Bottom
@@ -182,25 +188,19 @@ Partial Class Biblioteca
         Me.btnCrearLibro.Text = "Nuevo Libro"
         Me.btnCrearLibro.UseVisualStyleBackColor = False
         '
-        'btnCrearUsuario
+        'Panel1
         '
-        btnCrearUsuario.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        btnCrearUsuario.AutoSize = True
-        btnCrearUsuario.BackColor = System.Drawing.Color.FromArgb(CType(CType(67, Byte), Integer), CType(CType(114, Byte), Integer), CType(CType(94, Byte), Integer))
-        btnCrearUsuario.borderRadius = 20
-        btnCrearUsuario.FlatAppearance.BorderSize = 0
-        btnCrearUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        btnCrearUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        btnCrearUsuario.ForeColor = System.Drawing.Color.White
-        btnCrearUsuario.Location = New System.Drawing.Point(989, 14)
-        btnCrearUsuario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        btnCrearUsuario.MinimumSize = New System.Drawing.Size(0, 26)
-        btnCrearUsuario.Name = "btnCrearUsuario"
-        btnCrearUsuario.Padding = New System.Windows.Forms.Padding(6)
-        btnCrearUsuario.Size = New System.Drawing.Size(200, 58)
-        btnCrearUsuario.TabIndex = 2
-        btnCrearUsuario.Text = "Nuevo Usuario"
-        btnCrearUsuario.UseVisualStyleBackColor = False
+        Me.Panel1.BackColor = System.Drawing.SystemColors.MenuText
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(3, 852)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1276, 149)
+        Me.Panel1.TabIndex = 3
+        '
+        'SqLiteCommand1
+        '
+        Me.SqLiteCommand1.CommandText = Nothing
         '
         'Biblioteca
         '

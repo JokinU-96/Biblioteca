@@ -40,10 +40,10 @@ Public Module SQLLite
 
     Public Sub Ejecuta(ByVal BBDD As String, ByVal Cmd As SQLiteCommand)
         Try
-            Using Cnx As SQLiteConnection = Conectar(BBDD)
-                Cmd.Connection = Cnx
-                Cmd.ExecuteNonQuery()
-            End Using ' La conexión se cerrará automáticamente aquí
+            Dim Cnx As SQLiteConnection = Conectar(BBDD)
+            Cmd.Connection = Cnx
+            Cmd.ExecuteNonQuery()
+            ' La conexión se cerrará automáticamente aquí
         Catch ex As Exception
             Throw New Exception("No se logró realizar la consulta por: " & ex.Message)
         End Try
