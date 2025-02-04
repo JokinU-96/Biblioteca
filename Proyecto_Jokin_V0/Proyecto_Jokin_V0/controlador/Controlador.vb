@@ -20,8 +20,6 @@ Public Class Controlador
             Dim libro As Libro = New Libro(titulo, autor, sinopsis, edicion, id)
             libros.Add(libro)
         End While
-
-        MsgBox(libros.Count)
     End Function
 
     Function crearLibro(titulo As String, autor As String, edicion As Int32, sinopsis As String)
@@ -52,17 +50,15 @@ Public Class Controlador
 
         cargarLibros()
         Dim encontrado As Boolean = False
-        MsgBox(max)
+
         For Each libro In libros
             If libro.ID >= max + 1 Then
                 encontrado = True
-                MsgBox(libro.titulo)
+                MsgBox(libro.titulo + " añadido")
             End If
         Next
 
-        If encontrado Then
-            MsgBox("Su libro se ha añadido a la base de datos satisfactoriamente.")
-        Else
+        If Not encontrado Then
             MsgBox("Su libro no se encuentra en la base de datos.")
         End If
     End Function

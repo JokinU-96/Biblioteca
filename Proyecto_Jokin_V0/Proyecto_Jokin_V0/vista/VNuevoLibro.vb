@@ -3,5 +3,23 @@
     Dim miControlador As New Controlador
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         miControlador.crearLibro(tbTitulo.Text, tbAutor.Text, nudEdicion.Value, tbSinopsis.Text)
+        limpiarFormulario()
     End Sub
+
+    Function limpiarFormulario()
+        tbTitulo.Text = ""
+        tbAutor.Text = ""
+        tbSinopsis.Text = ""
+        nudEdicion.Value = 1999
+    End Function
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        limpiarFormulario()
+        cerrarVentana()
+        Biblioteca.nuevaTabla()
+    End Sub
+
+    Function cerrarVentana()
+        Me.Close()
+    End Function
 End Class

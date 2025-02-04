@@ -42,17 +42,17 @@ Public Class Biblioteca
 
 
 
-    Function nuevaTabla()
-
+    Public Function nuevaTabla()
+        Dim tablaCreada As Boolean = False
         Dim fila = 0
 
         Dim nuevosLibros As List(Of CardLibro) = New List(Of CardLibro)()
 
-        For i As Integer = 0 To miControlador.libros.Count - 1
+        For i As Integer = 0 To Controlador.libros.Count - 1
             Dim encontrado = False
             If controlesLibro.Count > 0 Then
                 For j As Integer = 0 To controlesLibro.Count - 1
-                    If miControlador.libros(i).titulo = controlesLibro(j).Titulo Then
+                    If Controlador.libros(i).titulo = controlesLibro(j).Titulo Then
                         encontrado = True
                     End If
                 Next
@@ -85,16 +85,26 @@ Public Class Biblioteca
 
         For i As Integer = 0 To controlesLibro.Count - 1
 
-            controlesLibro(i).Titulo = miControlador.libros(i).titulo
-            controlesLibro(i).Autor = miControlador.libros(i).autor
+            controlesLibro(i).Titulo = Controlador.libros(i).titulo
+            controlesLibro(i).Autor = Controlador.libros(i).autor
             controlesLibro(i).AutoSize = True
             controlesLibro(i).Dock = DockStyle.Fill
             controlesLibro(i).Location = New Point(227, YO)
             controlesLibro(i).MinimumSize = New Size(800, 230)
-            controlesLibro(i).Name = fila 'ID del libro (PENDIENTE)
+            controlesLibro(i).Name = Controlador.libros(i).ID 'ID del libro
             controlesLibro(i).Padding = New Padding(9, 8, 9, 8)
             controlesLibro(i).Size = New Size(800, 230)
             controlesLibro(i).TabIndex = fila
+
+            AddHandler controlesLibro(i).eliminarLibro, Sub()
+                                                            MsgBox("¿Intentas eliminarme tú?")
+                                                        End Sub
+            AddHandler controlesLibro(i).visualizarLibro, Sub()
+                                                              MsgBox("¿Intentas visualizar este libro tú?")
+                                                          End Sub
+            AddHandler controlesLibro(i).modificarLibro, Sub()
+                                                             MsgBox("¿Intentas modificarme tú?")
+                                                         End Sub
 
             fila += 1 'avanzo con las filas
             YO += 237 'avanzo con las coordenadas en vertical
@@ -103,9 +113,7 @@ Public Class Biblioteca
         Vlibros.tlpFondo.ResumeLayout(False)
         Vlibros.tlpFondo.PerformLayout()
 
-        'El pie de página y el panel final de color negro
-        'Vlibros.tlpFondo.RowStyles.Add(New RowStyle(SizeType.Absolute, 100.0!)) 'n: Pie de página
-        'Vlibros.tlpFondo.Controls.Add(Panel1, fila + 1, 0)
+        Return tablaCreada = True
     End Function
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
@@ -132,4 +140,6 @@ Public Class Biblioteca
     Private Sub Biblioteca_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         miControlador.cargarLibros()
     End Sub
+
+
 End Class

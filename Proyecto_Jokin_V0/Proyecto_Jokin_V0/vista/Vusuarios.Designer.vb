@@ -41,7 +41,7 @@ Partial Class Vusuarios
         Me.tlpFondo.ColumnCount = 3
         Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
-        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
+        Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44.0!))
         Me.tlpFondo.Controls.Add(Me.lblCatalogo, 1, 1)
         Me.tlpFondo.Controls.Add(Me.CardUsuario1, 1, 2)
         Me.tlpFondo.Controls.Add(Me.CardUsuario2, 1, 3)
@@ -53,9 +53,7 @@ Partial Class Vusuarios
         Me.tlpFondo.Margin = New System.Windows.Forms.Padding(0)
         Me.tlpFondo.Name = "tlpFondo"
         Me.tlpFondo.Padding = New System.Windows.Forms.Padding(10)
-
         Me.tlpFondo.RowCount = 8
-
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
