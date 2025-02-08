@@ -1,4 +1,6 @@
 ﻿Public Class CardUsuario
+
+    Dim eventos As Boolean
     Property NombreApellidos As String
         Get
             Return lblNombre.Text
@@ -27,6 +29,15 @@
         End Get
         Set(value As String)
             lblTlfno.Text = value
+        End Set
+    End Property
+
+    Property TieneEventos As Boolean
+        Get
+            Return eventos
+        End Get
+        Set(value As Boolean)
+            eventos = value
         End Set
     End Property
 

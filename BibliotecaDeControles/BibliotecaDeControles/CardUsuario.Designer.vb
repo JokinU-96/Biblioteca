@@ -52,7 +52,7 @@ Partial Class CardUsuario
         Me.tlpFondo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpFondo.Location = New System.Drawing.Point(0, 0)
         Me.tlpFondo.Name = "tlpFondo"
-        Me.tlpFondo.Padding = New System.Windows.Forms.Padding(20, 20, 20, 20)
+        Me.tlpFondo.Padding = New System.Windows.Forms.Padding(20)
         Me.tlpFondo.RowCount = 2
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
@@ -158,6 +158,8 @@ Partial Class CardUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
+        Me.BackColor = System.Drawing.SystemColors.Window
         Me.Controls.Add(Me.tlpFondo)
         Me.MinimumSize = New System.Drawing.Size(800, 230)
         Me.Name = "CardUsuario"

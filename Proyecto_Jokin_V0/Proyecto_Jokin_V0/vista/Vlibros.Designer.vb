@@ -33,17 +33,16 @@ Partial Class Vlibros
         Me.tlpFondo.AutoScroll = True
         Me.tlpFondo.AutoSize = True
         Me.tlpFondo.BackColor = System.Drawing.SystemColors.Window
-        Me.tlpFondo.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
         Me.tlpFondo.ColumnCount = 1
         Me.tlpFondo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tlpFondo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpFondo.Location = New System.Drawing.Point(218, 116)
         Me.tlpFondo.Margin = New System.Windows.Forms.Padding(0)
         Me.tlpFondo.Name = "tlpFondo"
-        Me.tlpFondo.Padding = New System.Windows.Forms.Padding(10)
+        Me.tlpFondo.Padding = New System.Windows.Forms.Padding(10, 10, 0, 10)
         Me.tlpFondo.RowCount = 1
         Me.tlpFondo.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.tlpFondo.Size = New System.Drawing.Size(873, 568)
+        Me.tlpFondo.Size = New System.Drawing.Size(872, 568)
         Me.tlpFondo.TabIndex = 1
         '
         'lblCatalogo
@@ -61,7 +60,7 @@ Partial Class Vlibros
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.tlpFondo, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.lblCatalogo, 1, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill

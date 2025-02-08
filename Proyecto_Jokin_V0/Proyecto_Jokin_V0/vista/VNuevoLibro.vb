@@ -2,8 +2,12 @@
 
     Dim miControlador As New Controlador
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        miControlador.crearLibro(tbTitulo.Text, tbAutor.Text, nudEdicion.Value, tbSinopsis.Text)
-        limpiarFormulario()
+        If btnAceptar.Text = "Añadir" Then
+            miControlador.crearLibro(tbTitulo.Text, tbAutor.Text, nudEdicion.Value, tbSinopsis.Text)
+            limpiarFormulario()
+        ElseIf btnAceptar.Text = "Modificar" Then
+            miControlador.modificarLibro(tbTitulo.Text, tbAutor.Text, nudEdicion.Value, tbSinopsis.Text, Int(lblID.Text))
+        End If
     End Sub
 
     Function limpiarFormulario()
@@ -16,7 +20,7 @@
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         limpiarFormulario()
         cerrarVentana()
-        Biblioteca.nuevaTabla()
+        Biblioteca.nuevaTablaLibros()
     End Sub
 
     Function cerrarVentana()

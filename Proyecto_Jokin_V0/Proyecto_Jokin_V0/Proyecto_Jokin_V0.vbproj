@@ -95,6 +95,7 @@
     <Compile Include="controlador\Controlador.vb" />
     <Compile Include="modelo\Libro.vb" />
     <Compile Include="modelo\SQLLite.vb" />
+    <Compile Include="modelo\Usuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -135,6 +136,12 @@
     <Compile Include="vista\VNuevoLibro.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\VNuevoUsuario.Designer.vb">
+      <DependentUpon>VNuevoUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\VNuevoUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\Vusuario.Designer.vb">
       <DependentUpon>Vusuario.vb</DependentUpon>
     </Compile>
@@ -166,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\VNuevoLibro.resx">
       <DependentUpon>VNuevoLibro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\VNuevoUsuario.resx">
+      <DependentUpon>VNuevoUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\Vusuario.resx">
       <DependentUpon>Vusuario.vb</DependentUpon>

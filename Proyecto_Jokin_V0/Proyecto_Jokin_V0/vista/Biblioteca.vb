@@ -5,14 +5,18 @@ Imports BibliotecaDeControles
 Public Class Biblioteca
     Dim mostrado As Boolean = False
 
+    Dim contadorHandler As Integer = 0
+
     Public miControlador As New Controlador
 
-    Dim controlesLibro As List(Of CardLibro) = New List(Of CardLibro)()
+    Public Shared controlesLibro As List(Of CardLibro) = New List(Of CardLibro)()
+    Public Shared controlesUsuario As List(Of CardUsuario) = New List(Of CardUsuario)()
 
     Dim c = 0
     Dim colorVerde = New Integer() {67, 114, 94}
     Dim colorBlanco = New Integer() {255, 255, 255}
     Dim colorNegro = New Integer() {0, 0, 0}
+    Dim colorRojo = New Integer() {193, 70, 52}
     Private Sub Biblioteca_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
         mostrado = True
         If mostrado Then
@@ -27,22 +31,138 @@ Public Class Biblioteca
         panel.Show()
     End Sub
 
+    Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
+        cambiarPanel(Vusuarios)
+        btnUsuarios.BackColor = miControlador.cambiarColor(colorBlanco)
+        btnUsuarios.ForeColor = miControlador.cambiarColor(colorVerde)
+
+        btnLibros.BackColor = miControlador.cambiarColor(colorVerde)
+        btnLibros.ForeColor = miControlador.cambiarColor(colorBlanco)
+
+        'Cargo los usaurios desde la base de datos a la tabla de usuarios'
+        miControlador.cargarUsuarios()
+        nuevaTablaUsuarios()
+    End Sub
+
+    Public Function nuevaTablaUsuarios()
+        Dim tablaCreada As Boolean = False
+        Dim fila = 0
+
+        Dim nuevosUsuarios As List(Of CardUsuario) = New List(Of CardUsuario)()
+
+        For i As Integer = 0 To Controlador.usuarios.Count - 1
+            Dim encontrado = False
+            If controlesUsuario.Count > 0 Then
+                For j As Integer = 0 To controlesUsuario.Count - 1
+                    If Controlador.usuarios(i).ID = controlesUsuario(j).Name Then
+                        encontrado = True
+                    End If
+                Next
+            End If
+
+            If Not encontrado Then
+                nuevosUsuarios.Add(New CardUsuario())
+            End If
+        Next
+
+        controlesUsuario.AddRange(nuevosUsuarios)
+
+        Vusuarios.tlpFondo.SuspendLayout()
+
+        For i As Integer = 0 To controlesUsuario.Count - 1
+            Vusuarios.tlpFondo.Controls.Add(controlesUsuario(i), 0, fila) 'Le asigno su fila
+        Next
+
+        Vusuarios.tlpFondo.RowCount = controlesUsuario.Count + 3
+
+        fila += 1 'cambio a la primera fila (0: margen)
+        fila += 1 'cambio a la segunda fila (1: encabezado)
+
+        For i As Integer = 0 To controlesUsuario.Count - 1
+            Vusuario.tlpFondo.RowStyles.Add(New RowStyle(SizeType.AutoSize))
+        Next
+
+        Dim YO As Integer = 132
+
+        For i As Integer = 0 To controlesUsuario.Count - 1
+
+            controlesUsuario(i).NombreApellidos = Controlador.usuarios(i).nombre + " " + Controlador.usuarios(i).apellido_1 + " " + Controlador.usuarios(i).apellido_2
+            controlesUsuario(i).telefono = Controlador.usuarios(i).telefono
+            controlesUsuario(i).id = Controlador.usuarios(i).ID
+            controlesUsuario(i).AutoSize = True
+            controlesUsuario(i).Dock = DockStyle.Fill
+            controlesUsuario(i).Location = New Point(227, YO)
+            controlesUsuario(i).MinimumSize = New Size(700, 230)
+            controlesUsuario(i).Size = New Size(Vusuarios.tlpFondo.Width, 230)
+            controlesUsuario(i).Name = Controlador.usuarios(i).ID 'ID del usuario
+            controlesUsuario(i).Padding = New Padding(9, 8, 9, 8)
+            controlesUsuario(i).Size = New Size(800, 230)
+            controlesUsuario(i).TabIndex = fila
+
+            If Not controlesUsuario(i).TieneEventos Then
+
+                Dim usuario As Usuario = Controlador.usuarios(i)
+
+                AddHandler controlesUsuario(i).eliminarUsuario, Sub()
+                                                                    miControlador.eliminarUsuario(usuario)
+                                                                End Sub
+
+                AddHandler controlesUsuario(i).visualizarUsuario, Sub()
+                                                                      visualizarUsuario(usuario)
+                                                                  End Sub
+
+                AddHandler controlesUsuario(i).modificarUsuario, Sub()
+                                                                     VNuevoUsuario.tbNombre.Text = usuario.nombre
+                                                                     VNuevoUsuario.tbApellido_1.Text = usuario.apellido_1
+                                                                     VNuevoUsuario.tbApellido_2.Text = usuario.apellido_2
+                                                                     VNuevoUsuario.tbTelefono.Text = usuario.telefono
+                                                                     VNuevoUsuario.btnAceptar.Text = "Modificar"
+                                                                     VNuevoUsuario.lblID.Text = usuario.ID
+                                                                     VNuevoUsuario.Show()
+                                                                 End Sub
+            End If
+
+            controlesUsuario(i).TieneEventos = True
+
+
+            fila += 1 'avanzo con las filas
+            YO += 237 'avanzo con las coordenadas en vertical
+        Next
+
+        Vusuarios.tlpFondo.ResumeLayout(False)
+        Vusuarios.tlpFondo.PerformLayout()
+
+        Return tablaCreada = True
+    End Function
+
+    Function visualizarUsuario(usuario As Usuario)
+        cambiarPanel(Vusuario)
+        Vusuario.lblNombreDinamico.Text = usuario.nombre
+        Vusuario.lblApellidoDinamico_1.Text = usuario.apellido_1
+        Vusuario.lblApellidoDinamico_2.Text = usuario.apellido_2
+        Vusuario.lblTelefonoDinamico.Text = usuario.telefono
+    End Function
+
+
     Private Sub btnLibros_Click(sender As Object, e As EventArgs) Handles btnLibros.Click
         cambiarPanel(Vlibros)
-        btnLibros.BackColor = cambiarColor(colorBlanco)
-        btnLibros.ForeColor = cambiarColor(colorVerde)
+        btnLibros.BackColor = miControlador.cambiarColor(colorBlanco)
+        btnLibros.ForeColor = miControlador.cambiarColor(colorVerde)
 
-        btnUsuarios.BackColor = cambiarColor(colorVerde)
-        btnUsuarios.ForeColor = cambiarColor(colorBlanco)
+        btnUsuarios.BackColor = miControlador.cambiarColor(colorVerde)
+        btnUsuarios.ForeColor = miControlador.cambiarColor(colorBlanco)
 
         'Cargo los libros desde la base de datos a la tabla de libros'
         miControlador.cargarLibros()
-        nuevaTabla()
+        nuevaTablaLibros()
+    End Sub
+
+    Private Sub btnCrearUsuario_Click(sender As Object, e As EventArgs)
+        VNuevoUsuario.Show()
     End Sub
 
 
-
-    Public Function nuevaTabla()
+    Public Function nuevaTablaLibros()
         Dim tablaCreada As Boolean = False
         Dim fila = 0
 
@@ -52,7 +172,7 @@ Public Class Biblioteca
             Dim encontrado = False
             If controlesLibro.Count > 0 Then
                 For j As Integer = 0 To controlesLibro.Count - 1
-                    If Controlador.libros(i).titulo = controlesLibro(j).Titulo Then
+                    If Controlador.libros(i).ID = controlesLibro(j).Name Then
                         encontrado = True
                     End If
                 Next
@@ -80,31 +200,61 @@ Public Class Biblioteca
             Vlibros.tlpFondo.RowStyles.Add(New RowStyle(SizeType.AutoSize))
         Next
 
-        tlpFondo.RowStyles.Add(New RowStyle(SizeType.Absolute, 120.0!))
+
         Dim YO As Integer = 132
 
         For i As Integer = 0 To controlesLibro.Count - 1
 
             controlesLibro(i).Titulo = Controlador.libros(i).titulo
             controlesLibro(i).Autor = Controlador.libros(i).autor
+            controlesLibro(i).Edicion = Controlador.libros(i).edicion
             controlesLibro(i).AutoSize = True
             controlesLibro(i).Dock = DockStyle.Fill
             controlesLibro(i).Location = New Point(227, YO)
-            controlesLibro(i).MinimumSize = New Size(800, 230)
+            controlesLibro(i).MinimumSize = New Size(700, 230)
+            controlesLibro(i).Size = New Size(Vlibros.tlpFondo.Width, 230)
             controlesLibro(i).Name = Controlador.libros(i).ID 'ID del libro
             controlesLibro(i).Padding = New Padding(9, 8, 9, 8)
             controlesLibro(i).Size = New Size(800, 230)
             controlesLibro(i).TabIndex = fila
 
-            AddHandler controlesLibro(i).eliminarLibro, Sub()
-                                                            MsgBox("¿Intentas eliminarme tú?")
-                                                        End Sub
-            AddHandler controlesLibro(i).visualizarLibro, Sub()
-                                                              MsgBox("¿Intentas visualizar este libro tú?")
-                                                          End Sub
-            AddHandler controlesLibro(i).modificarLibro, Sub()
-                                                             MsgBox("¿Intentas modificarme tú?")
-                                                         End Sub
+            If Controlador.libros(i).disponible Then
+                controlesLibro(i).Prestar = "PRESTAR"
+                controlesLibro(i).colorPrestar = colorVerde
+            ElseIf Not Controlador.libros(i).disponible Then
+                controlesLibro(i).Prestar = "PRESTADO"
+                controlesLibro(i).colorPrestar = colorRojo
+            End If
+
+            If Not controlesLibro(i).TieneEventos Then
+
+                Dim libro As Libro = Controlador.libros(i)
+
+                AddHandler controlesLibro(i).prestarLibro, Sub()
+                                                               miControlador.prestarLibro(libro)
+                                                           End Sub
+
+                AddHandler controlesLibro(i).eliminarLibro, Sub()
+                                                                miControlador.eliminarLibro(libro)
+                                                            End Sub
+
+                AddHandler controlesLibro(i).visualizarLibro, Sub()
+                                                                  visualizarLibro(libro)
+                                                              End Sub
+
+                AddHandler controlesLibro(i).modificarLibro, Sub()
+                                                                 VNuevoLibro.tbTitulo.Text = libro.titulo
+                                                                 VNuevoLibro.tbAutor.Text = libro.autor
+                                                                 VNuevoLibro.nudEdicion.Value = libro.edicion
+                                                                 VNuevoLibro.tbSinopsis.Text = libro.sinopsis
+                                                                 VNuevoLibro.btnAceptar.Text = "Modificar"
+                                                                 VNuevoLibro.lblID.Text = libro.ID
+                                                                 VNuevoLibro.Show()
+                                                             End Sub
+            End If
+
+            controlesLibro(i).TieneEventos = True
+
 
             fila += 1 'avanzo con las filas
             YO += 237 'avanzo con las coordenadas en vertical
@@ -116,22 +266,13 @@ Public Class Biblioteca
         Return tablaCreada = True
     End Function
 
-    Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
-        cambiarPanel(Vusuarios)
-        btnUsuarios.BackColor = cambiarColor(colorBlanco)
-        btnUsuarios.ForeColor = cambiarColor(colorVerde)
-
-        btnLibros.BackColor = cambiarColor(colorVerde)
-        btnLibros.ForeColor = cambiarColor(colorBlanco)
-    End Sub
-    Function cambiarColor(color)
-        Return System.Drawing.Color.FromArgb(CType(CType(color(0), Byte), Integer), CType(CType(color(1), Byte), Integer), CType(CType(color(2), Byte), Integer))
+    Function visualizarLibro(libro As Libro)
+        cambiarPanel(Vlibro)
+        Vlibro.lblTituloDinamico.Text = libro.titulo
+        Vlibro.lblAutorDinamico.Text = libro.autor
+        Vlibro.lblEdicionDinamico.Text = libro.edicion
+        Vlibro.lblSinopsisDinamico.Text = libro.sinopsis
     End Function
-
-    Private Sub PanelPrincipal_Resize(sender As Object, e As EventArgs) Handles PanelPrincipal.Resize
-        Vlibros.Width = PanelPrincipal.Width
-        Vusuarios.Width = PanelPrincipal.Width
-    End Sub
 
     Private Sub btnCrearLibro_Click(sender As Object, e As EventArgs) Handles btnCrearLibro.Click
         VNuevoLibro.Show()
@@ -139,7 +280,13 @@ Public Class Biblioteca
 
     Private Sub Biblioteca_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         miControlador.cargarLibros()
+        miControlador.cargarUsuarios()
     End Sub
 
-
+    Private Sub PanelPrincipal_Resize(sender As Object, e As EventArgs) Handles PanelPrincipal.Resize
+        Vlibros.Width = PanelPrincipal.Width
+        Vusuarios.Width = PanelPrincipal.Width
+        Vlibro.Width = PanelPrincipal.Width
+        Vusuario.Width = PanelPrincipal.Width
+    End Sub
 End Class
