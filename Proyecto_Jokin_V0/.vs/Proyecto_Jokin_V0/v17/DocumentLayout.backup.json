@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|solutionrelative:proyecto_jokin_v0\\vista\\biblioteca.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|c:\\users\\j_oki\\escritorio\\2\u00BA\\desarrollo de interfaces\\proyecto\\biblioteca\\proyecto_jokin_v0\\proyecto_jokin_v0\\vista\\biblioteca.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\proyecto_jokin_v0\\vista\\biblioteca.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{A1082035-835F-4EC7-825B-97F6B82D9485}|Proyecto_Jokin_V0\\Proyecto_Jokin_V0.vbproj|solutionrelative:proyecto_jokin_v0\\vista\\biblioteca.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "Proyecto_Jokin_V0\\vista\\Biblioteca.vb",
               "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Biblioteca.vb",
               "RelativeToolTip": "Proyecto_Jokin_V0\\vista\\Biblioteca.vb",
-              "ViewState": "AgIAACwBAAAAAAAAAAAqwD0BAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAC0BAAAAAAAAAAAmwD0BAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-02-09T16:17:53.282Z",
               "EditorCaption": ""
@@ -42,8 +42,7 @@
               "ToolTip": "C:\\Users\\j_oki\\Escritorio\\2\u00BA\\Desarrollo de Interfaces\\Proyecto\\Biblioteca\\Proyecto_Jokin_V0\\Proyecto_Jokin_V0\\vista\\Biblioteca.vb [Dise\u00F1o]",
               "RelativeToolTip": "Proyecto_Jokin_V0\\vista\\Biblioteca.vb [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-02-09T16:06:34.532Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-02-09T16:06:34.532Z"
             }
           ]
         }
