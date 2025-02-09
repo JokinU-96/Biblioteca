@@ -6,6 +6,7 @@ Public Class Controlador
 
     Public Shared libros As List(Of Libro) = New List(Of Libro)()
     Public Shared usuarios As List(Of Usuario) = New List(Of Usuario)()
+    Public Shared prestamos As List(Of Prestamo) = New List(Of Prestamo)()
 
     Dim colorRojo = New Integer() {193, 70, 52}
     Dim colorVerde = New Integer() {67, 114, 94}
@@ -174,7 +175,65 @@ Public Class Controlador
         MsgBox("El libro ha sido actualizado en la base de datos.")
     End Sub
 
-    Sub prestarLibro(libro As Libro)
+    Sub cargarPrestamos()
+        prestamos.Clear()
+        Dim Cmd As New SQLiteCommand
+        Dim Sql As String = "SELECT * FROM Prestamos"
+        Cmd.CommandText = Sql
+
+        Dim lector = SQLLite.GetDataReader(My.Settings.conexion, Cmd)
+
+        While lector.Read()
+            Dim IDlibro As Integer = lector.GetInt32(1) 'Recibe el id de cada libro prestado.
+            Dim IDusuario As Integer = lector.GetInt32(2) 'Recibe el id de cada usuario con un libro prestado.
+            Dim fechaIni As String = lector.GetString(3) 'Recibe la fecha de inicio.
+            Dim fechaFin As String = lector.GetString(4) 'Recibe la fecha de fin.
+            'Dim id As Integer = lector.GetInt32(0) 'Recibe el ID
+            Dim prestamo As Prestamo = New Prestamo(IDusuario, IDlibro, fechaIni, fechaFin)
+
+            prestamos.Add(prestamo)
+        End While
+    End Sub
+
+    Sub crearPrestamo(libro As Libro, usuario As Usuario)
+        Dim nuevoPrestamo As Prestamo = New Prestamo(usuario.ID, libro.ID, Date.Now, Date.Now.AddDays(15))
+        prestamos.Add(nuevoPrestamo)
+
+        Dim Cmd As New SQLiteCommand
+        Dim Sql As String = "INSERT INTO Prestamos(ID_Libro, ID_Usuario, Fecha_INI, Fecha_FIN)
+                                    VALUES (
+                                            @IDlibro,
+                                            @IDusuario,
+                                            @FechaIni,
+                                            @FechaFin)" 'Hago un insert con los datos que me pasa la función.
+
+        'Busco el ID más alto en la lista de libros.
+
+        Cmd.CommandText = Sql
+        'Cmd.Parameters.Add("@ID", DbType.Int32).Value = max + 1
+        Cmd.Parameters.Add("@IDlibro", DbType.Int32).Value = libro.ID
+        Cmd.Parameters.Add("@IDusuario", DbType.Int32).Value = usuario.ID
+        Cmd.Parameters.Add("@FechaIni", DbType.String).Value = nuevoPrestamo.fechaIni.ToString("d")
+        Cmd.Parameters.Add("@FechaFin", DbType.String).Value = nuevoPrestamo.fechaFin.ToString("d")
+
+        SQLLite.Ejecuta(My.Settings.conexion, Cmd)
+
+        cargarPrestamos()
+        Dim encontrado As Boolean = False
+
+        For Each libro In libros
+            If libro.ID = nuevoPrestamo.IDlibro Then
+                encontrado = True
+                MsgBox(libro.titulo + " prestado por " + usuario.nombre)
+            End If
+        Next
+
+        If Not encontrado Then
+            MsgBox("Su libro no se encuentra en la base de datos.")
+        End If
+    End Sub
+
+    Sub prestarLibro(libro As Libro, usuario As Usuario)
         Dim Cmd As New SQLiteCommand
         Dim Sql As String = "UPDATE Libros
                                 SET
@@ -189,6 +248,7 @@ Public Class Controlador
         If libro.disponible Then
             n = 0  'Si el libro está disponible lo pongo como No disponible porque el usuario ha pulsado para prestarlo.
             libro.disponible = False
+            crearPrestamo(libro, usuario)
             For Each ctrl In Vlibros.tlpFondo.Controls
                 If ctrl.Name = libro.ID Then
                     ctrl.Prestar = "PRESTADO"
@@ -199,6 +259,7 @@ Public Class Controlador
         Else
             n = 1
             libro.disponible = True
+            devolverLibro(libro, usuario)
             For Each ctrl In Vlibros.tlpFondo.Controls
                 If ctrl.Name = libro.ID Then
                     ctrl.Prestar = "PRESTAR"
@@ -213,6 +274,24 @@ Public Class Controlador
 
         SQLLite.Ejecuta(My.Settings.conexion, Cmd)
 
+    End Sub
+
+    Public Sub devolverLibro(libro As Libro, usuario As Usuario)
+        'Tengo que poner la fecha de devolución como la fecha fin.
+        Dim Cmd As New SQLiteCommand
+        Dim Sql As String = "UPDATE Prestamos
+                                SET
+                                    Fecha_FIN = @fechaFIN
+                                WHERE
+                                    ID_Libro = @IDlibro AND
+                                    ID_Usuario = @IDusuario" 'Hago un update con los datos que me pasa la función.
+
+        Cmd.CommandText = Sql
+        Cmd.Parameters.Add("@IDlibro", DbType.Int32).Value = libro.ID
+        Cmd.Parameters.Add("@IDusuario", DbType.Int32).Value = usuario.ID
+        Cmd.Parameters.Add("@fechaFIN", DbType.String).Value = Date.Now.ToString("d")
+
+        SQLLite.Ejecuta(My.Settings.conexion, Cmd)
     End Sub
 
     Sub crearUsuario(nombre As String, apellido_1 As String, apellido_2 As String, telefono As Int32)
@@ -241,7 +320,7 @@ Public Class Controlador
 
         SQLLite.Ejecuta(My.Settings.conexion, Cmd)
 
-        cargarLibros()
+        cargarUsuarios()
         Dim encontrado As Boolean = False
         MsgBox(max)
         For Each usuario In usuarios
@@ -305,7 +384,7 @@ Public Class Controlador
         End If
     End Sub
 
-    Sub modificarUsuario(nombre As String, apellido_1 As String, apellido_2 As String, telefono As Integer, ID As Integer)
+    Sub modificarUsuario(nombre As String, apellido_1 As String, apellido_2 As String, telefono As Int32, ID As Integer)
         Dim Cmd As New SQLiteCommand
         Dim Sql As String = "UPDATE Usuarios
                                 SET
@@ -318,17 +397,37 @@ Public Class Controlador
 
         Cmd.CommandText = Sql
         Cmd.Parameters.Add("@ID", DbType.Int32).Value = ID
-        Cmd.Parameters.Add("@titulo", DbType.String).Value = nombre
-        Cmd.Parameters.Add("@autor", DbType.String).Value = apellido_1
-        Cmd.Parameters.Add("@edicion", DbType.Int32).Value = apellido_2
-        Cmd.Parameters.Add("@sinopsis", DbType.String).Value = telefono
+        Cmd.Parameters.Add("@nombre", DbType.String).Value = nombre
+        Cmd.Parameters.Add("@apellido_1", DbType.String).Value = apellido_1
+        Cmd.Parameters.Add("@apellido_2", DbType.String).Value = apellido_2
+        Cmd.Parameters.Add("@telefono", DbType.Int32).Value = telefono
 
         SQLLite.Ejecuta(My.Settings.conexion, Cmd)
 
-        cargarLibros()
+        cargarUsuarios()
 
         MsgBox("El usuario ha sido actualizado en la base de datos.")
     End Sub
+
+    Function cargarDatosPrestamosXUsuario(usuario As Usuario)
+        Dim Cmd As New SQLiteCommand
+        Dim Sql As String = "SELECT libro.Titulo, libro.Escritor, prestamo.Fecha_FIN, prestamo.Fecha_INI
+	                                FROM Prestamos As prestamo LEFT JOIN Libros As libro
+	                                WHERE prestamo.ID_Libro = libro.ID AND prestamo.ID_Libro = (SELECT ID_Libro FROM Prestamos WHERE ID_Usuario = @usuarioID)"
+        Cmd.CommandText = Sql
+        Cmd.Parameters.Add("@usuarioID", DbType.Int32).Value = usuario.ID
+        Dim datos = SQLLite.GetDataTable(My.Settings.conexion, Cmd)
+        Return datos
+    End Function
+
+    Function cargarDatosUsuarios()
+        Dim Cmd As New SQLiteCommand
+        Dim Sql As String = "SELECT Nombre, Telefono, ID FROM Usuarios"
+        Cmd.CommandText = Sql
+        Dim datos = SQLLite.GetDataTable(My.Settings.conexion, Cmd)
+        Return datos
+    End Function
+
 
     Function cambiarColor(color)
         Return System.Drawing.Color.FromArgb(CType(CType(color(0), Byte), Integer), CType(CType(color(1), Byte), Integer), CType(CType(color(2), Byte), Integer))

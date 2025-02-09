@@ -135,13 +135,22 @@ Public Class Biblioteca
         Return tablaCreada = True
     End Function
 
-    Function visualizarUsuario(usuario As Usuario)
-        cambiarPanel(Vusuario)
+    Sub visualizarUsuario(usuario As Usuario)
         Vusuario.lblNombreDinamico.Text = usuario.nombre
         Vusuario.lblApellidoDinamico_1.Text = usuario.apellido_1
         Vusuario.lblApellidoDinamico_2.Text = usuario.apellido_2
         Vusuario.lblTelefonoDinamico.Text = usuario.telefono
-    End Function
+        Vusuario.lblID.Text = usuario.ID
+        Vusuario.dgvPrestamosXUsuario.DataSource = Nothing
+        Vusuario.dgvPrestamosXUsuario.Rows.Clear()
+
+        For Each usuario In Controlador.usuarios
+            If usuario.ID.ToString = Vusuario.lblID.Text Then
+                Vusuario.dgvPrestamosXUsuario.DataSource = miControlador.cargarDatosPrestamosXUsuario(usuario)
+            End If
+        Next
+        cambiarPanel(Vusuario)
+    End Sub
 
 
     Private Sub btnLibros_Click(sender As Object, e As EventArgs) Handles btnLibros.Click
@@ -231,7 +240,25 @@ Public Class Biblioteca
                 Dim libro As Libro = Controlador.libros(i)
 
                 AddHandler controlesLibro(i).prestarLibro, Sub()
-                                                               miControlador.prestarLibro(libro)
+                                                               If Vlibros.obtenerUsuarioDGV Is Nothing And libro.disponible Then
+                                                                   MsgBox("Selecciona una fila.")
+                                                               ElseIf libro.disponible Then
+                                                                   miControlador.prestarLibro(libro, Vlibros.obtenerUsuarioDGV())
+                                                               ElseIf Not libro.disponible Then
+                                                                   miControlador.cargarPrestamos()
+                                                                   Dim idUsuario As Integer
+                                                                   For Each e In Controlador.prestamos
+                                                                       If e.IDlibro = libro.ID Then
+                                                                           idUsuario = e.IDusuario
+                                                                       End If
+                                                                   Next
+
+                                                                   For Each u In Controlador.usuarios
+                                                                       If u.ID = idUsuario Then
+                                                                           miControlador.prestarLibro(libro, u)
+                                                                       End If
+                                                                   Next
+                                                               End If 'tengo que recoger el usuario seleccionado en el datagridview
                                                            End Sub
 
                 AddHandler controlesLibro(i).eliminarLibro, Sub()
@@ -285,8 +312,12 @@ Public Class Biblioteca
 
     Private Sub PanelPrincipal_Resize(sender As Object, e As EventArgs) Handles PanelPrincipal.Resize
         Vlibros.Width = PanelPrincipal.Width
+        Vlibros.Height = PanelPrincipal.Height
         Vusuarios.Width = PanelPrincipal.Width
+        Vusuarios.Height = PanelPrincipal.Height
         Vlibro.Width = PanelPrincipal.Width
+        Vlibro.Height = PanelPrincipal.Height
         Vusuario.Width = PanelPrincipal.Width
+        Vusuario.Height = PanelPrincipal.Height
     End Sub
 End Class

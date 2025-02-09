@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="controlador\Controlador.vb" />
     <Compile Include="modelo\Libro.vb" />
+    <Compile Include="modelo\Prestamo.vb" />
     <Compile Include="modelo\SQLLite.vb" />
     <Compile Include="modelo\Usuario.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

@@ -5,7 +5,14 @@
             miControlador.crearUsuario(tbNombre.Text, tbApellido_1.Text, tbApellido_2.Text, Int(tbTelefono.Text))
             limpiarFormulario()
         ElseIf btnAceptar.Text = "Modificar" Then
-            miControlador.modificarUsuario(tbNombre.Text, tbApellido_1.Text, tbApellido_2.Text, tbTelefono.Text, Int(lblID.Text))
+            Try
+                miControlador.modificarUsuario(tbNombre.Text, tbApellido_1.Text, tbApellido_2.Text, Int(tbTelefono.Text), lblID.Text)
+            Catch ex As Exception
+                If Int(tbTelefono.Text) > 999999999 Then
+                    MsgBox("El número de teléfono es erroneo.")
+                End If
+                MsgBox("Algo no va bien.")
+            End Try
         End If
     End Sub
 

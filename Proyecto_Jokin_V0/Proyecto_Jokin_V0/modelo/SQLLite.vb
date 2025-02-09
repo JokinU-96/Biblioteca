@@ -23,15 +23,15 @@ Public Module SQLLite
 
     Public Function GetDataTable(ByVal BBDD As String, ByVal Cmd As SQLiteCommand) As DataTable
         Try
-            Using Cnx As SQLiteConnection = Conectar(BBDD)
-                Cmd.Connection = Cnx
-                Dim ds As New DataSet
-                ds.Tables.Add("datos")
-                Using da As New SQLiteDataAdapter(Cmd)
-                    da.Fill(ds, "datos")
-                End Using ' El adaptador se cierra automáticamente aquí
-                Return ds.Tables(0)
-            End Using ' La conexión se cerrará automáticamente aquí
+            Dim Cnx As SQLiteConnection = Conectar(BBDD)
+            Cmd.Connection = Cnx
+            Dim ds As New DataSet
+            ds.Tables.Add("datos")
+            Using da As New SQLiteDataAdapter(Cmd)
+                da.Fill(ds, "datos")
+            End Using ' El adaptador se cierra automáticamente aquí
+            Return ds.Tables(0)
+            ' La conexión se cerrará automáticamente aquí
         Catch ex As Exception
             Throw New Exception("No se logró realizar la consulta por: " & ex.Message)
         End Try

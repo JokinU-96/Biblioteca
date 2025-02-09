@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Vlibros
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,12 +20,14 @@ Partial Class Vlibros
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.tlpFondo = New System.Windows.Forms.TableLayoutPanel()
         Me.lblCatalogo = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.dgvUsuarios = New System.Windows.Forms.DataGridView()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.dgvUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tlpFondo
@@ -63,6 +65,7 @@ Partial Class Vlibros
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.tlpFondo, 1, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.lblCatalogo, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.dgvUsuarios, 0, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(9, 8)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -72,6 +75,22 @@ Partial Class Vlibros
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(1132, 684)
         Me.TableLayoutPanel1.TabIndex = 2
+        '
+        'dgvUsuarios
+        '
+        Me.dgvUsuarios.AllowUserToAddRows = False
+        Me.dgvUsuarios.AllowUserToDeleteRows = False
+        Me.dgvUsuarios.AllowUserToResizeRows = False
+        Me.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvUsuarios.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvUsuarios.Location = New System.Drawing.Point(3, 119)
+        Me.dgvUsuarios.Name = "dgvUsuarios"
+        Me.dgvUsuarios.ReadOnly = True
+        Me.dgvUsuarios.RowHeadersWidth = 20
+        Me.dgvUsuarios.RowTemplate.Height = 24
+        Me.dgvUsuarios.Size = New System.Drawing.Size(212, 562)
+        Me.dgvUsuarios.TabIndex = 6
         '
         'Vlibros
         '
@@ -88,6 +107,7 @@ Partial Class Vlibros
         Me.Text = "Vlibros"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        CType(Me.dgvUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -95,4 +115,5 @@ Partial Class Vlibros
     Friend WithEvents tlpFondo As TableLayoutPanel
     Friend WithEvents lblCatalogo As Label
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents dgvUsuarios As DataGridView
 End Class
